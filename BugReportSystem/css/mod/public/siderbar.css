@@ -119,9 +119,9 @@ ul.page-sidebar-menu > li.active > a .selected {
    margin-top: 1px;
    margin-right: 5px;
    display: inline;
-    font-family: 'Glyphicons Halflings';
+    font-family: 'FontAwesome';
    height: auto;
-   content: "\e257";
+   content: "\f053";
    font-weight: 300;
    text-shadow:none;
 }
@@ -131,10 +131,10 @@ ul.page-sidebar-menu > li > a > .arrow.open:before {
    margin-top: 1px;
    margin-right: 3px;
    display: inline;
-   font-family: 'Glyphicons Halflings';
+   font-family: 'FontAwesome';
    height: auto;
    font-size: 12px;
-   content: "\e259";
+   content: "\f078";
    font-weight: 300;
    text-shadow:none;
 }
@@ -638,5 +638,3 @@ Horizontal Menu(new in v1.2)
 	}
 
 }
-
-
