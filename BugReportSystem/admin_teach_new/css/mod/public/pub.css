@@ -1,0 +1,388 @@
+/*
+*create by rmz 20160729
+*内容内部共用的
+*
+*
+*
+* *
+* edit by wtx 20160805
+* 修改内容：按照功能划分整理代码
+* 功能概要：筛选条件，自定义响应式表单，老师选择样式（多选菜单），
+* 表格展现样式，日历样式
+*/
+
+
+
+
+/*
+*edit by wtx 20160805
+*功能：筛选条件部分的样式
+*/
+.filter{
+    border: 1px solid #ccc;
+    height: auto;
+    margin-top: 15px;
+    padding: 15px 20px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.filter .inlineSectionMark{/*用于单行的表单每个分区增加间距*/
+    margin-right:20px;
+}
+.filter-common a {
+    margin: auto 6px;
+}
+.filter_title{
+    min-width:80px;
+    margin-right: 5px;
+    display: inline-block;
+}
+.active-current{
+    color:black;
+    font-weight: bold;
+}
+.form-inline-section{
+    margin:10px 0 0;
+}
+/*筛选条件中用于调整块元素的上下边距以及字体大小 颜色*/
+.courseSelect_section{
+    font-size:18px;
+    margin:10px 0;
+}
+.courseSelect_section .active{
+    color:red;
+}
+.dataSelect_section{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.courseTab_section{
+    margin-bottom: 10px;
+}
+.smallTab_section{
+    margin-top: 20px;
+}
+
+
+
+
+/*
+*edit by wtx 20160805
+*功能：自定义响应式表单样式，用于展现水平表单布局
+*/
+.form-addtext{
+    line-height: 34px;
+}
+.require-warn{
+    color: red;
+}
+.form-horizontal .control-group{
+    margin-bottom: 20px;
+}
+.form-horizontal .control-label{
+    float: left;
+    width: 160px;
+    padding-top: 5px;
+    text-align: right;
+}
+.form-horizontal .controls{
+    margin-left: 180px;
+}
+.form-horizontal .controls .help-inline{
+    margin-top: 6px;
+    padding-left: 5px;
+}
+.form-horizontal .controls .tea-wrap{
+    border: 1px solid #e5e5e5;
+    height: 160px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.form-horizontal .controls .m-wrap{
+    border: 1px solid #e5e5e5;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 100%;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.form-horizontal .controls .m-wrap:focus,.form-horizontal .controls .tea-wrap:focus{
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+.form-horizontal .controls .m-wrap.small {
+    width: 120px !important;
+}
+.form-horizontal .controls  .m-wrap.medium {
+    width: 206px !important;
+}
+.form-horizontal .controls  .m-wrap.large {
+    width: 320px !important;
+}
+.form-horizontal .controls  .m-wrap.huge {
+    width:100%;
+    min-width: 320px !important;
+    max-width: 800px !important;
+}
+
+.form-horizontal .controls  .tea-wrap.small {
+    width:100%;
+    min-width: 320px !important;
+    max-width: 300px !important;
+}
+.form-horizontal .controls  .tea-wrap.large {
+    width:100%;
+    min-width: 320px !important;
+    max-width: 500px !important;
+}
+.form-actions{
+    padding-left: 180px;
+}
+
+.form-horizontal .controls input[disabled],.form-horizontal .controls select[disabled]{
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+}
+.controls>.ke-container{
+    max-width:700px;
+    min-width:320px;
+}
+@media(max-width: 480px) {
+    .form-horizontal .control-label {
+        float: none;
+        width: auto;
+        padding-top: 0;
+        text-align: left
+    }
+
+    .form-horizontal .controls {
+        margin-left: 0
+    }
+
+    .form-horizontal .control-list {
+        padding-top: 0
+    }
+
+    .form-horizontal .form-actions {
+        padding-right: 10px;
+        padding-left: 10px
+    }
+
+}
+
+
+/*
+*edit by wtx 20160805
+*功能：多选菜单，老师选择样式
+*/
+.checklist{
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #bbb;
+    padding:5px 0px;
+    min-width:180px;
+    height:150px;
+    overflow-y:scroll;
+    border-radius:3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.checklist .checkitem{
+    font-size: 14px;
+    height:25px;
+    line-height:25px;
+    padding:0px 10px;
+    margin-bottom: 1px;
+}
+.checklist .checkitem:hover{
+    background:#5897fb;
+    color:#fff;
+}
+.checklist .checkselected{
+    background:#ccc;
+}
+.checklist .checkselected:hover{
+    background:#5897fb;
+}
+.checklist input{
+    display: none;
+}
+.checkresult{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857;
+    padding: 1px 12px
+    6px;
+    min-height: 36px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+.checkresult .checkitem{/*选择项展现样式*/
+    background-color: #e4e4e4;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    cursor: default;
+    margin-right: 5px;
+    padding: 0 2px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 5px;
+    float: none;
+    display: inline-block;
+}
+.checkresult .checkitem em{
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+
+/*
+ *edit by wtx 20160805
+ *功能：全站所有的表格的展现样式
+ */
+.table-striped{
+    margin-bottom: 0px;
+}
+.table-page-footer{
+
+}
+.dataTables_info{
+    padding-top: 7px;
+    margin-left: 12px;
+}
+.select-checkbox-text{
+    margin-left: 5px;
+}
+.table-border{
+    border:1px solid #ddd;
+}
+.dataTable{
+    font-size: 12px;
+}
+.dataTables_wrapper .nav-tabs{
+    border-bottom: 0;
+}
+.dataTables_wrapper .nav-tabs > li{
+    margin-bottom:0px;
+}
+.table-bordered > thead > tr > th{
+    background:#f4f4f4;
+}
+.dataTables_wrapper .table-page-footer:last-child {
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+.dataTables_wrapper .table-page-footer {
+    margin: 0;
+}
+.dataTables_wrapper .pagination {
+    margin: 0 12px;
+}
+.dataTables_wrapper .table{
+    font-size: 12px;
+}
+/*有选择头的表格的‘显示详细数据’的样式 实例：课程数据-公开课一览 复选框*/
+.hideshow{
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+.hideshow input{
+    vertical-align: middle;
+    margin-top:-2px;
+}
+
+
+/*
+*edit by wtx 20160805
+*calender样式，专用于日历的样式
+*/
+.calender-table-responsive{
+    min-height: 0.01%;
+    overflow-x: auto;
+}
+.calender-table{
+    margin-top: 30px;
+}
+.calender-table-responsive table{
+    border-left: 1px solid #8faad9;
+    border-top: 1px solid #8faad9;
+    width: 100%;
+}
+
+.calender-table-responsive td {
+    border-bottom: 1px solid #8faad9;
+    border-right: 1px solid #8faad9;
+    color: #666;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+.calender-table-responsive tr:nth-child(2n) td {
+    background-color: #eaedf3;
+}
+.calender-table-responsive thead td {
+    background-color: #bbcee9;
+    color: #000;
+    font-weight: bold;
+}
+.calender-table-responsive th {
+    background-color: #bbcee9;
+    border-bottom: 1px solid #8faad9;
+    border-right: 1px solid #8faad9;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.calendar_td {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.43);
+    display: inline-block;
+    line-height: 1.5;
+    padding: 40px 0 5px;
+    width: 100%;
+}
+.calender-date-select{
+    text-align:center;
+}
+.calender-date-select-section{
+    font-size:36px;
+    margin-top:20px;
+    margin-bottom: 10px;
+    height: 40px;
+    line-height: 1;
+}
+.time-range{
+    width:16%;
+}
+.calender-date{
+    height:50px;
+}
+.calender-time-range{
+    width:300px;
+    height:100px;
+}

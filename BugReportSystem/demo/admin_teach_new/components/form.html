@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forms</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<link rel="stylesheet" href="http://code1.enhance.cn/dist/admin_teach_new/css/channel/bootstrap.css?20160705" type="text/css"/>
+	<link rel="stylesheet" href="http://code1.enhance.cn/dist/admin_teach_new/css/channel/teach.css?20160705" type="text/css"/>
+	<!-- 仅用于demo展示 begin -->
+	<style type="text/css">
+		body{
+			background:#fff !important;
+		}
+	</style>
+	<!-- 仅用于demo展示 end -->
+</head>
+<body>
+	<div class="container-fuild">
+		<h3>1.水平排列表单 常用代码</h3>
+		<!-- <form action="" class="form-horizontal">
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">type=text</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">必填项<span class="text-danger">*</span></label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">有附加说明</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control">
+				</div>
+				<div class="col-sm-5 form-addtext">
+					(从开课时间计算，修改父课程有效天数，子课程会同步修改)
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">有工具提示<span class="text-danger">(此效果需要手动编写js代码)</span></label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control">
+				</div>
+				<div class="col-sm-5 form-addtext">
+					<button class="btn btn-default" data-toggle="tooltip" data-placement="right" title="授课周期最后一天"><span class="glyphicon glyphicon-question-sign"></span></button>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">点击弹出有弹出框 不带标题<span class="text-danger">同上</span></label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control">
+				</div>
+				<div class="col-sm-5 form-addtext">
+					<button class="btn btn-default" data-toggle="popover" data-placement="right" data-content="授课周期最后一天"><span class="glyphicon glyphicon-question-sign"></span></button>
+				
+				</div>
+			</div>
+			<div class="form-group has-success">
+				<label for="" class="col-sm-2 control-label">成功</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="form-group has-warning">
+				<label for="" class="col-sm-2 control-label">提醒</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="form-group has-error">
+				<label for="" class="col-sm-2 control-label">错误</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">内嵌前缀</label>
+				<div class="col-sm-5">
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">@</span>
+					  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">内嵌后缀</label>
+				<div class="col-sm-5">
+					<div class="input-group">
+					  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+					  <span class="input-group-addon" id="basic-addon2">@example.com</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">内嵌前后缀</label>
+				<div class="col-sm-5">
+					<div class="input-group">
+					  <span class="input-group-addon">$</span>
+					  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+					  <span class="input-group-addon">.00</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">内嵌前缀按钮</label>
+				<div class="col-sm-5">
+				    <div class="input-group">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button">Go!</button>
+				      </span>
+				      <input type="text" class="form-control" placeholder="Search for...">
+				    </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">内嵌后缀按钮</label>
+				<div class="col-sm-5">
+				    <div class="input-group">
+				    	<input type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">Go!</button>
+						</span>
+				    </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="disabledTextInput"  class="col-sm-2 control-label">
+			    禁用输入（Fieldset disabled）
+				</label>
+				<div class="col-sm-5">
+			    <input type="text" id="disabledTextInput" class="form-control"
+			       placeholder="禁止输入" disabled>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect"  class="col-sm-2 control-label">
+			    禁用选择菜单（Fieldset disabled）
+				</label>
+				<div class="col-sm-5">
+				    <select id="disabledSelect" class="form-control" disabled>
+				        <option>禁止选择</option>
+				    </select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">radio checkbox 行内</label>
+				<div class="col-sm-5">
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" value="option1"> 选项 1
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox2" value="option2"> 选项 2
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox3" value="option3"> 选项 3
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="optionsRadiosinline" id="optionsRadios3"
+					value="option1" checked> 选项 1
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="optionsRadiosinline" id="optionsRadios4"
+					value="option2"> 选项 2
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">radio checkbox 占单行</label>
+				<div class="col-sm-5">
+					<div class="checkbox">
+						<label><input type="checkbox" value="">选项 1</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="">选项 2</label>
+					</div>
+
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 选项 1
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 选项 2 - 选择它将会取消选择选项 1
+						</label>
+					</div>
+					<div class="has-success">
+					    <div class="checkbox">
+					        <label>
+					            <input type="checkbox" id="checkboxSuccess" value="option1">成功样式
+					        </label>
+					    </div>
+					</div>
+					<div class="has-warning">
+					    <div class="checkbox">
+					        <label>
+					            <input type="checkbox" id="checkboxWarning" value="option1">警告样式
+					        </label>
+					    </div>
+					</div>
+					<div class="has-error">
+					    <div class="checkbox">
+					        <label>
+					            <input type="checkbox" id="checkboxError" value="option1">危险样式
+					        </label>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">select</label>
+				<div class="col-sm-5">
+					<select name="" id="" class="form-control">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">select multiple</label>
+				<div class="col-sm-5">
+					<select name="" id="" class="form-control" multiple>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">textarea</label>
+				<div class="col-sm-5">
+					<textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+				</div>
+			</div>
+		</form>  -->
+		<form method="post" action="/teach/childcourseset" class="form-horizontal">
+			<div class="control-group">
+		    <label class="control-label">小号的
+		      <span class="require-warn">*</span></label>
+		    <div class="controls">
+		      <input type="text" value="small" class="small m-wrap">
+		      <span class="helpinline">
+		        <span class="require-warn">强调的说明内容</span></span>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">中号
+		      <span class="require-warn">*</span></label>
+		    <div class="controls">
+		      <input type="text" value="medium" class="medium m-wrap">
+		      <span class="helpinline">直接复制文本框的内容多少添加到input、select样式</span>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">大号的form元素</label>
+		    <div class="controls">
+		      <input type="text" value="large" class="large m-wrap">
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">特大的
+		      <span class="require-warn">*</span></label>
+		    <div class="controls">
+		      <input type="url" value="huge" name="banner" required="" class="huge m-wrap" disabled>
+		      <span class="helpinline">不可用的，在input加上disabled属性</span>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">select 小号
+		      <span class="require-warn">*</span></label>
+		    <div class="controls">
+		      <select name="" class="small m-wrap">
+		        <option value="1">small</option>
+		        <option value="194">small</option></select>
+		      <span class="helpinline">直接复制文本框的内容多少添加到input、select样式</span>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">select 中大号
+		      <span class="require-warn">*</span></label>
+		    <div class="controls">
+		      <select name="" class="medium m-wrap">
+		        <option value="1"></option>
+		        <option value="194">medium</option></select>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">select 大号
+		      <span class="require-warn">*</span></label>
+		    <div class="controls">
+		      <select name="" class="large m-wrap" disabled>
+		        <option value="1">large</option>
+		        <option value="194">large</option></select>
+		      <span class="helpinline">不可用的，在input加上disabled属性</span>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">select 巨大号
+		      <span class="require-warn">*</span></label>
+		    <div class="controls">
+		      <select name="" class="huge m-wrap">
+		        <option value="1">huge</option>
+		        <option value="194">huge</option></select>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">多选框</label>
+		    <div class="controls">
+		      <ul class="checklist js-checklist" style="margin: 0 0 10px 0px;">
+		        <li class="checkitem js-checkitem ">
+		          <input name="teacher[]" value="47" type="checkbox">qiusaer</li>
+		        <li class="checkitem js-checkitem ">
+		          <input name="teacher[]" value="44" type="checkbox">jxl</li>
+		        <li class="checkitem js-checkitem ">
+		          <input name="teacher[]" value="43" type="checkbox">神仙</li>
+		        <li class="checkitem js-checkitem ">
+		          <input name="teacher[]" value="42" type="checkbox">罗其钰</li>
+		        <li class="checkitem js-checkitem ">
+		          <input name="teacher[]" value="41" type="checkbox">黄大仙</li></ul>
+		      <div class="checkresult js-checkresult"></div>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">时间
+		      <span class="require-warn">*</span></label>
+		    <div class="controls">
+		      <input type="date" value="" class="medium m-wrap">
+		      <span class="helpinline">需要时间类型的 type="date"人，必须的type="date"</span></div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">可否退课</label>
+		    <div class="controls">
+		      <label class="radio-inline">
+		        <input type="radio" name="refund_yn" value="0" checked="">可以</label>
+		      <label class="radio-inline">
+		        <input type="radio" name="refund_yn" value="1">不可以</label></div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">复选框</label>
+		    <div class="controls">
+		      <label class="checkbox-inline">
+		        <input type="checkbox" id="inlineCheckbox1" value="option1">选项 1</label>
+		      <label class="checkbox-inline">
+		        <input type="checkbox" id="inlineCheckbox2" value="option2">选项 2</label>
+		      <label class="checkbox-inline">
+		        <input type="checkbox" id="inlineCheckbox3" value="option3">选项 3</label></div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label">单选框</label>
+		    <div class="controls">
+		      <label class="radio-inline">
+		        <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked="">选项 1</label>
+		      <label class="radio-inline">
+		        <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option2">选项 2</label></div>
+		  </div>
+		  <div class="control-group">
+		  	<label for="" class="control-label">
+		  		独占一行
+		  	</label>
+		  	<div class="controls">
+		  			<div class="checkbox">
+						<label><input type="checkbox" value="">选项 1</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="">选项 2</label>
+					</div>
+
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> 选项 1
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 选项 2 - 选择它将会取消选择选项 1
+						</label>
+					</div>
+					<div class="has-success">
+					    <div class="checkbox">
+					        <label>
+					            <input type="checkbox" id="checkboxSuccess" value="option1">成功样式
+					        </label>
+					    </div>
+					</div>
+					<div class="has-warning">
+					    <div class="checkbox">
+					        <label>
+					            <input type="checkbox" id="checkboxWarning" value="option1">警告样式
+					        </label>
+					    </div>
+					</div>
+					<div class="has-error">
+					    <div class="checkbox">
+					        <label>
+					            <input type="checkbox" id="checkboxError" value="option1">危险样式
+					        </label>
+					    </div>
+					</div>
+		  	</div>
+		  </div>
+		  <div class="control-group">
+	         <label class="control-label">texarea</label>
+	        <div class="controls">
+	        <textarea name="include" class="tea-wrap small">small</textarea>
+	       </div>
+	     </div>
+	    <div class="control-group">
+	      <label class="control-label">公告</label>
+	      <div class="controls">
+	        <textarea name="notes" class="tea-wrap large">large</textarea></div>
+	    </div>
+		</form>
+		<hr>
+		<h3>2.行内表单</h3>
+		<form action="" class="form-inline">
+			<div class="form-group">
+				<label>开课区间</label>
+				<input type="text" class="form-control">
+				<span> 至 </span>
+				<input type="text" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<label>考试科目：</label>
+				<select name="" id="" class="form-control">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+				<select name="" id="" class="form-control">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>主讲老师：</label>
+				<select name="" id="" class="form-control">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+			</div>
+		</form>
+		<hr>
+		<form class="form-inline">
+		  <div class="form-group">
+		    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label class="sr-only" for="exampleInputPassword3">Password</label>
+		    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+		  </div>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox"> 记住我
+		    </label>
+		  </div>
+		  <button type="submit" class="btn btn-default">登陆</button>
+		</form>
+		<hr>
+		<h3>3.基本表单</h3>
+		<form>
+			<div class="form-group">
+				<label class="control-label">text</label>
+				<input type="text" class="form-control" placeholder="text">
+			</div>
+			<div class="form-group">
+				<label class="control-label">有必填项<span class="text-danger">*</span></label>
+				<input type="text" class="form-control" placeholder="text">
+			</div>
+			<div class="form-group">
+				<label class="control-label">Password</label>
+				<input type="password" class="form-control" placeholder="Password">
+			</div>
+			<div class="form-group has-success">
+				<label class="control-label">成功</label>
+				<input type="text" class="form-control" placeholder="text">
+			</div>
+			<div class="form-group has-warning">
+				<label class="control-label">提醒</label>
+				<input type="text" class="form-control" placeholder="text">
+			</div>
+			<div class="form-group has-error">
+				<label class="control-label">错误</label>
+				<input type="text" class="form-control" placeholder="text">
+			</div>
+			<div class="form-group has-success has-feedback">
+			    <label class="control-label">带后缀图标成功样式</label>
+			    <input type="text" class="form-control">
+			    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+			</div>
+			<div class="form-group has-warning has-feedback">
+			    <label class="control-label">带后缀图标提醒样式</label>
+			    <input type="text" class="form-control">
+			    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+			</div>
+			<div class="form-group has-error has-feedback">
+			    <label class="control-label">带后缀图标错误样式</label>
+			    <input type="text" class="form-control">
+			    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+			</div>
+			<div class="form-group has-success has-feedback">
+			    <label class="control-label">带内嵌前缀以及后缀图标</label>
+			    <div class="input-group">
+			        <span class="input-group-addon">@</span>
+			        <input type="text" class="form-control">
+			    </div>
+			    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+			</div>
+			<div class="form-group">
+				<label class="control-label">有附加说明</label>
+				<input type="text" class="form-control" placeholder="text">
+				<span class="form-addtext">(从开课时间计算，修改父课程有效天数，子课程会同步修改) </span>
+			</div>
+		</form>
+	</div>
+
+
+	<script src="http://code1.enhance.cn/dist/libs/seajs/2.1.0/sea.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	    seajs.config({
+	        base: "http://code1.enhance.cn/dist",
+	        alias: {
+	            'jquery': 'libs/jquery/1.11.0/jquery.js',
+	            'admin_teach_new/js/channel/teach':'admin_teach_new/js/channel/teach.js?20160705'
+	        },
+	        preload:["admin_teach_new/js/channel/teach"]      
+	    });
+	    seajs.use(["admin_teach_new/js/channel/teach"], function(teach) {
+
+	    });
+	</script>
+</body>
+</html>

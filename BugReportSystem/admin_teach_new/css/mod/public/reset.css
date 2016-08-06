@@ -1,0 +1,91 @@
+/*
+*create by rmz 20160729
+*共用头和左侧边栏
+*重置的bootstrap
+*/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.eot');
+  src: url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+   url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.woff2') format('woff2'), 
+   url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.woff') format('woff'), 
+   url('/dist/admin_teach_new/css/img/glyphicons-halflings-regular.ttf') format('truetype'), 
+  url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+body{
+	 font: 14px/1.5 Arial, 'Hiragino Sans GB', 微软雅黑, 'Microsoft Yahei';
+	 background:#3d3d3d !important;
+
+}
+.navbar-brand{
+	padding:5px 0px;
+}
+.navbar{
+	min-height:45px;
+}
+.cus-navbar{
+	border-radius: 0;
+}
+.cus-navbar-header{
+	float: left;
+}
+.navbar-nav > li > a {
+     padding-top: 10px; 
+     padding-bottom: 10px; 
+     line-height:25px;
+}
+@media (min-width: 768px){
+	.navbar-nav > li > a {
+	     padding-top: 10px; 
+	     padding-bottom: 10px; 
+	}
+}
+@media (max-width: 768px){
+	.navbar-nav > li {
+		float: left;
+	}
+
+	.navbar-nav{
+		margin:0;
+	}
+	/*下拉菜单*/
+
+	.navbar-nav .open .dropdown-menu{
+		right:0px;
+		position: absolute;
+	    float: none;
+	    width: auto;
+	    margin-top: 0;
+	    background-color: #fff;
+	    border: 1px solid #ccc;
+	    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	}
+}
+/*切换按钮*/
+.navbar-toggle{
+	margin-top: 6px;
+	margin-bottom: 4px;
+	margin-right: 0;
+}
+/*下拉菜单右侧定位，大小屏右侧对齐*/
+.cus-navbar-nav .dropdown-menu{
+	left:auto;
+	right:0px;
+	top:48px;
+}
+/*logo*/
+.navbar-brand{
+	height:45px;
+	padding:10px 0px;
+}
+.navbar-brand img{
+	display: inline-block;
+	vertical-align:middle;
+	margin-right:5px;
+	margin-top: -5px;
+}
+.navbar-header{
+	margin-left: 0  !important;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提示</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<link rel="stylesheet" href="http://code1.enhance.cn/dist/admin_teach_new/css/channel/bootstrap.css?20160705" type="text/css"/>
+	<link rel="stylesheet" href="http://code1.enhance.cn/dist/admin_teach_new/css/channel/teach.css?20160705" type="text/css"/>
+	<!-- 主仅用于demo展示 begin -->
+	<style type="text/css">
+		body{
+			background:#fff !important;
+		}
+	</style>
+	<!-- 仅用于demo展示 end -->
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="page-header">
+			<h1>提示</h1>
+		</div>
+		<h3>1.弹出框<small class="text-danger">此效果需要手动编写js代码，如有需求请与前端沟通！</small></h3>
+		<div class="trigger_hover">
+			<h4>鼠标悬停触发</h4>
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover title">
+			  Popover on 左侧
+			</button>
+
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover title" >
+			  Popover on 顶部
+			</button>
+
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+			sagittis lacus vel augue laoreet rutrum faucibus." title="Popover title" >
+			  Popover on 底部
+			</button>
+
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover title" >
+			  Popover on 右侧
+			</button>
+		</div>
+		<div class="trigger_click">
+			<h4>鼠标点击触发</h4>
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover title" >
+			  Popover on 左侧
+			</button>
+
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover title" >
+			  Popover on 顶部
+			</button>
+
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+			sagittis lacus vel augue laoreet rutrum faucibus." title="Popover title" >
+			  Popover on 底部
+			</button>
+
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover title" >
+			  Popover on 右侧
+			</button>
+		</div>
+		<h3>2.警告框</h3>
+		<div class="alert alert-warning">
+		   <a href="#" class="close" data-dismiss="alert">
+		      &times;
+		   </a>
+		   <strong>class:</strong>alert-warning
+		</div>
+		<div class="alert alert-info">
+		   <a href="#" class="close" data-dismiss="alert">
+		      &times;
+		   </a>
+		   <strong>class:</strong>alert-info
+		</div>
+		<div class="alert alert-danger">
+		   <a href="#" class="close" data-dismiss="alert">
+		      &times;
+		   </a>
+		   <strong>class:</strong>alert-danger
+		</div>
+		<div class="alert alert-success">
+		   <a href="#" class="close" data-dismiss="alert">
+		      &times;
+		   </a>
+		   <strong>class:</strong>alert-success
+		</div>
+		<h3>3.工具提示<small class="text-danger">此效果需要手动编写js代码，如有需求请与前端沟通！</small></h3>
+		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+		<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+		<h3>4.模态框</h3>
+		<button class="btn btn-primary btn-lg" data-toggle="modal"
+		   data-target="#myModal">
+		   开始演示模态框
+		</button>
+
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal">
+		   <div class="modal-dialog">
+		      <div class="modal-content">
+		         <div class="modal-header">
+		            <button type="button" class="close"
+		               data-dismiss="modal" aria-hidden="true">
+		                  &times;
+		            </button>
+		            <h4 class="modal-title" id="myModalLabel">
+		               模态框（Modal）标题
+		            </h4>
+		         </div>
+		         <div class="modal-body">
+		            在这里添加一些文本
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default"
+		               data-dismiss="modal">关闭
+		            </button>
+		            <button type="button" class="btn btn-primary">
+		               提交更改
+		            </button>
+		         </div>
+		      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+
+	<script src="http://code1.enhance.cn/dist/libs/seajs/2.1.0/sea.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	    seajs.config({
+	        base: "http://code1.enhance.cn/dist",
+	        alias: {
+	            'jquery': 'libs/jquery/1.11.0/jquery.js',
+	            'admin_teach_new/js/channel/teach':'admin_teach_new/js/channel/teach.js?20160705'
+	        },
+	        preload:["admin_teach_new/js/channel/teach"]      
+	    });
+	    seajs.use(["admin_teach_new/js/channel/teach"], function(teach) {
+
+	    });
+	</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/*
+*create by rmz 20160729
+*header
+*自定义共用头和左侧边栏
+*/
+/*左右结构*/
+.main-content {
+    min-height: 280px;
+    background:#fff;
+    padding-bottom: 20px;
+}
+@media (max-width: 979px){
+    .page-sidebar{
+        background-color: #292929 !important;
+        margin:0 10px;
+    }
+    .nav-collapse, .nav-collapse.collapse {
+        clear: both;
+        overflow: hidden;
+    }
+    
+}
+@media (min-width: 980px){
+    .page-sidebar {
+        background-color: #3d3d3d;
+        position: absolute;
+        left:0px;
+        width: 225px;
+    }
+    .main-content {
+        margin-left: 225px;
+        margin-top: 0px;
+        min-height:1200px;
+    }
+}
+
+/**/
+.cus-navbar{
+	background:#3d3d3d;
+	margin-bottom: 0;
+}
+.cus-navbar .user-img{
+	width:25px;
+	height:25px;
+	border-radius:50%;
+}
+.cus-navbar-inner{
+	height:45px;
+	background:#212121;
+
+}
+.cus-brand-text{
+	margin:0;
+	display:inline-block;
+	vertical-align: middle;
+	line-height:25px;
+}
+.cus-user .dropdown-menu{
+	min-width:140px !important;
+}
+.navbar .nav>li>.dropdown-menu:before {
+    position: absolute;
+    top: -7px;
+    right: 9px;
+    display:block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(255,255,255);
+    content: '';
+}
+.cus-user .navbar .nav>li>.dropdown-menu:after{
+	position: absolute;
+    top: -6px;
+    right: 10px;
+    display: block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    border-left: 6px solid transparent;
+    content: '';
+}

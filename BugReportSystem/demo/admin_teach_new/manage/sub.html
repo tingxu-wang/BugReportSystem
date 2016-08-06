@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" href="http://code1.enhance.cn/dist/admin_teach_new/css/channel/bootstrap.css?20160705" type="text/css" />
+    <link rel="stylesheet" href="http://code1.enhance.cn/dist/admin_teach_new/css/channel/teach.css?20160705" type="text/css" /></head>
+
+  <body>
+    <div class="navbar navbar-inverse cus-navbar" id="js-cus-navbar">
+      <div class="cus-navbar-inner">
+        <div class="container-fluid cus-container-fluid">
+          <div class="navbar-header cus-navbar-header">
+            <a class="navbar-brand" href="#">
+              <img width="32" alt="Brand" src="/dist/admin_teach_new/css/img/logo.png">
+              <p class="cus-brand-text">考满分教学管理后台</p></a>
+          </div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".nav-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="nav navbar-nav pull-right cus-navbar-nav">
+            <li>
+              <a href="#">TOEFL</a></li>
+            <li>
+              <a href="#">TOEFL</a></li>
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown">科目切换
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">TOEFL</a></li>
+                <li>
+                  <a href="#">GRE</a></li>
+                <li>
+                  <a href="#">IELTS</a></li>
+                <li>
+                  <a href="#">GMAT</a></li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="">其它</a></li>
+              </ul>
+            </li>
+            <li class="dropdown cus-user">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class="user-img" src="http://img.enhance.cn/gre/bbs/17/17d18196c987b5de44c3b5f5ea278c32.jpg" alt="otest">
+                <span class="username">Otest</span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>退出</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main-container" id="main-container">
+      <div class="main-container-inner">
+        <div class="page-sidebar nav-collapse collapse in">
+          <ul class="page-sidebar-menu">
+            <li>
+              <div class="sidebar-toggler hidden-phone"></div>
+            </li>
+            <li>
+              <form action="" class="sidebar-search">
+                <div class="input-box">
+                  <input type="text" placeholder="Search…">
+                  <input type="button" class="submit" value=""></div>
+              </form>
+            </li>
+            <li class="start">
+              <a href="index.html">
+                <i class="icon-cc glyphicon glyphicon-dashboard"></i>
+                <span class="title">控制台</span>
+                <span class="selected"></span>
+              </a>
+            </li>
+            <li >
+              <a href="javascript:;">
+                <i class="icon-cogs glyphicon glyphicon-book"></i>
+                <span class="title">班级情况</span>
+                <span class="arrow open"></span>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">我的班级</a></li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="javascript:;">
+                <i class="icon-cogs glyphicon glyphicon-stats"></i>
+                <span class="title">课程数据</span>
+                <span class=" selected"></span>
+                <span class="arrow open"></span>
+              </a>
+              <ul class="sub-menu">
+                <li class="active">
+                  <a href="layout_horizontal_sidebar_menu.html">AIO课程一览</a></li>
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">低价课程一览</a></li>
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">学生异动一览</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <i class="icon-cogs glyphicon glyphicon-list-alt"></i>
+                <span class="title">课程管理</span>
+                <span class="arrow open"></span>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">父课程管理</a></li>
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">子课程设置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <i class="icon-cogs glyphicon glyphicon-repeat"></i>
+                <span class="title">退课管理</span>
+                <span class="arrow open"></span>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">AIO教师审核</a></li>
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">AIO-CC审核</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <i class="icon-cogs glyphicon glyphicon-tags"></i>
+                <span class="title">优惠系统</span>
+                <span class="arrow open"></span>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">优惠码管理</a></li>
+                <li>
+                  <a href="layout_horizontal_sidebar_menu.html">优惠码创建</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="active" href="javascript:;">
+                <i class="icon-sitemap glyphicon glyphicon-folder-open"></i>
+                <span class="title">3 Level Menu</span>
+                <span class="arrow open"></span>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="javascript:;">Item 1
+                    <span class="arrow"></span></a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">Sample Link 1</a></li>
+                    <li>
+                      <a href="#">Sample Link 2</a></li>
+                    <li>
+                      <a href="#">Sample Link 3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:;">Item 1
+                    <span class="arrow"></span></a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">Sample Link 1</a></li>
+                    <li>
+                      <a href="#">Sample Link 1</a></li>
+                    <li>
+                      <a href="#">Sample Link 1</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Item 3</a></li>
+              </ul>
+            </li>
+            <li class="">
+              <a href="javascript:;">
+                <i class="icon-folder-open glyphicon glyphicon-align-justify"></i>
+                <span class="title">4 Level Menu</span>
+                <span class="arrow"></span>
+              </a>
+              <ul class="sub-menu" style="display: none;">
+                <li>
+                  <a href="javascript:;">
+                    <i class="icon-cogs glyphicon glyphicon glyphicon-globe"></i>Item 1
+                    <span class="arrow"></span></a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="javascript:;">
+                        <i class="icon-user"></i>Sample Link 1
+                        <span class="arrow"></span></a>
+                      <ul class="sub-menu">
+                        <li>
+                          <a href="#">
+                            <i class="icon-remove glyphicon glyphicon-bullhorn"></i>Sample Link 1</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="icon-pencil glyphicon glyphicon-flash"></i>Sample Link 1</a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="icon-edit glyphicon glyphicon-earphone"></i>Sample Link 1</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="icon-globe glyphicon glyphicon-briefcase"></i>Item 2
+                    <span class="arrow"></span></a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">
+                        <i class="icon-user glyphicon glyphicon-bullhorn"></i>Sample Link 1</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="icon-external-link glyphicon glyphicon-bullhorn"></i>Sample Link 1</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="icon-bell glyphicon glyphicon-bullhorn"></i>Sample Link 1</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-folder-open glyphicon glyphicon-bullhorn"></i>Item 3</a>
+                </li>
+              </ul>
+            </li>
+            </li>
+          </ul>
+        </div>
+        <div class="main-content">
+          <div class="container-fluid">
+            <h3>子课程管理</h3>
+            <div class="filter">
+              <form class="form-inline">
+                考试科目：
+                <div class="form-group">
+                  <select class="form-control">
+                    <option value="id">课程ID</option>
+                    <option value="name">课程名称</option>
+                  </select>
+                </div>
+                <div class="form-group inlineSectionMark">
+                  <input type="text" class="form-control input-width-plug" name="sinfo">
+                </div>
+                <input class="btn btn-sm btn-primary" type="submit" value="查询">
+                <a href="/teach/childcourse">
+                  <button class="btn btn-sm btn-primary" type="button">重置</button>
+                </a>
+              </form>
+            </div>
+            <div class="filter">
+              <p class="filter-common">
+                产品线：&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="active-current" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;c=-1">
+                  全部
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;c=1">
+                  GMAT
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;c=3">
+                  GRE
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;c=4">
+                  TOEFL
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;c=5">
+                  IELTS
+                </a>
+                |
+              </p>
+              <p class="filter-common">
+                课程类型：
+                <a class="active-current" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;l=-1">
+                  全部
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;l=0">
+                  AIO-普通课程
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;l=5">
+                  低价课
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;l=6">
+                  精品班
+                </a>
+                |
+              </p>
+              <p class="filter-common">
+                课程分类：
+                <a class="active-current" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=-1">
+                  全部
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=1">
+                  听力
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=2">
+                  阅读
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=3">
+                  口语
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=4">
+                  写作
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=5">
+                  机经
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=6">
+                  填空
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=7">
+                  逻辑
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=8">
+                  IR
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=9">
+                  数学
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=10">
+                  语法
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;f=11">
+                  雅思综合
+                </a>
+                |
+              </p>
+            </div>
+            <div class="filter">
+              <p class="filter-common">
+                父课程：&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=1">
+                  公开课测试课程
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=10">
+                  托福阅读强化班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=12">
+                  托福写作强化班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=14">
+                  托福听力强化班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=16">
+                  托福口语强化班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=28">
+                  托福专题课
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=42">
+                  TOEFL All in One 阅读班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=43">
+                  TOEFL All in One 写作班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=44">
+                  TOEFL All in One 听力班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=45">
+                  TOEFL All in One 口语班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=78">
+                  听力测试课程
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=80">
+                  口语测试课程
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=82">
+                  GRE正式课程
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=91">
+                  GRE测试课程
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=96">
+                  GRE阅读All in One（测试）
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=112">
+                  雅思测试课程
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=160">
+                  托福1V6精品班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=187">
+                  GMAT ALL in one 逻辑班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=188">
+                  gmat测试低价课
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=191">
+                  带你上天的六人班
+                </a>
+                |
+                <a class="" href="/teach/childcourse?&amp;c=-1&amp;l=-1&amp;f=-1&amp;k=-1&amp;p=1&amp;k=194">
+                  雅思口语测试课程
+                </a>
+                |
+              </p>
+            </div>
+            <div class="dataTables_wrapper">
+              <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>激活码</th>
+                      <th>状态</th>
+                      <th>创建日期</th>
+                      <th>有效期</th>
+                      <th>金额(满分币)</th>
+                      <th>限用额度(满分币)</th>
+                      <th>科目</th>
+                      <th>备注</th>
+                      <th width="25%">激活记录</th>
+                      <th>操作</th></tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td>192</td>
+                        <td title="父课程:带你上天的六人班">
+                          <a target="_blank" href="http://ke.kaomanfen.com/coursecenter/dashboard?cid=192">非常六加一</a></td>
+                        <td>688800</td>
+                        <td>20160606</td>
+                        <td>20160707</td>
+                        <td>陈月琴|</td>
+                        <td>6</td>
+                        <td>
+                          <a href="/teach/teachcourseuserlist?cid=192">0</a></td>
+                        <td>
+                          <a href="/teach/createclass?target_id=192&amp;cid=191">排期配置</a>
+                          <br>
+                          <a href="/teach/childcourseset?cid=192">修改课程</a>
+                          <br>
+                          <a href="/admin/createactivity?target_id=192">生成终端页</a>
+                          <br>
+                          <a href="/courseadmin/taskclone?cid=192">复制任务</a></td>
+                        <td>
+                          <a target="_blank" href="http://ke.kaomanfen.com/coursecenter/dashboard?cid=192">课程中心</a>
+                          <br>
+                          <a href="/courseadmin/questionnairestat?cid=192">课程问卷</a>
+                          <br>
+                          <a target="_blank" href="javascript:;">终端页</a></td>
+                      </tr>
+                      <tr>
+                          <td>222</td>
+                          <td title="父课程:gmat测试低价课"><a target="_blank" href="http://ke.kaomanfen.com/coursecenter/dashboard?cid=222">222</a></td>
+                          <td>10</td>
+                          <td>20160722</td>
+                          <td>20160823</td>
+                          <td>谢赛楠|</td>
+                          <td>111</td>
+                          <td><a href="/teach/teachcourseuserlist?cid=222">1</a></td>
+                          <td>
+                              <a href="/teach/createclass?target_id=222&amp;cid=188">排期配置</a>
+                              <br>
+                              <a href="/teach/childcourseset?cid=222">修改课程</a>
+                              <br>
+                              <a href="/admin/createactivity?target_id=222">生成终端页</a>
+                              <br>
+                              <a href="/courseadmin/taskclone?cid=222">复制任务</a>
+                          </td>
+                          <td>
+                              <a target="_blank" href="http://ke.kaomanfen.com/coursecenter/dashboard?cid=222">课程中心</a>
+                              <br>
+                              <a href="/courseadmin/questionnairestat?cid=222">课程问卷</a>
+                              <br>
+                              <a target="_blank" href="javascript:;">终端页</a>
+                          </td>
+                      </tr>
+                    </tbody>
+                </table>
+                <div class="table-page-footer js-table-page-footer clearfix" style="width: 1618px;">
+                  <div class="dataTables_info pull-left">总共2389条记录，每页显示30条</div>
+                  <div class="pull-right paging_bootstrap">
+                    <ul class="pagination">
+                      <li class="prev disabled">
+                        <a href="#">
+                          <i class="glyphicon glyphicon-chevron-left"></i>
+                        </a>
+                      </li>
+                      <li class="active">
+                        <a href="javascript:void();">1</a></li>
+                      <li>
+                        <a href="/teach/getcouponlist?&amp;status=-1&amp;sort=&amp;p=1&amp;search=&amp;limit=30&amp;p=2" class="bootstrap">2</a></li>
+                      <li>
+                        <a href="/teach/getcouponlist?&amp;status=-1&amp;sort=&amp;p=1&amp;search=&amp;limit=30&amp;p=3" class="bootstrap">3</a></li>
+                      <li>
+                        <a href="/teach/getcouponlist?&amp;status=-1&amp;sort=&amp;p=1&amp;search=&amp;limit=30&amp;p=4" class="bootstrap">4</a></li>
+                      <li>
+                        <a href="/teach/getcouponlist?&amp;status=-1&amp;sort=&amp;p=1&amp;search=&amp;limit=30&amp;p=5" class="bootstrap">5</a></li>
+                      <li>
+                        <a href="/teach/getcouponlist?&amp;status=-1&amp;sort=&amp;p=1&amp;search=&amp;limit=30&amp;p=6" class="bootstrap">6</a></li>
+                      <li>
+                        <a href="/teach/getcouponlist?&amp;status=-1&amp;sort=&amp;p=1&amp;search=&amp;limit=30&amp;p=7" class="bootstrap">7</a></li>
+                      <li>
+                        <a href="#">...</a></li>
+                      <li>
+                        <a href="#">80</a></li>
+                      <li class="next">
+                        <a href="/teach/getcouponlist?&amp;status=-1&amp;sort=&amp;p=1&amp;search=&amp;limit=30&amp;p=2">
+                          <i class="glyphicon glyphicon-chevron-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://code1.enhance.cn/dist/libs/seajs/2.1.0/sea.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        seajs.config({
+          base: "http://code1.enhance.cn/dist",
+          alias: {
+            'jquery': 'libs/jquery/1.11.0/jquery.js',
+            "jqueryui": "libs/jqueryui/1.10.3/jqueryui.js",
+            'admin_teach_new/js/channel/teach': 'admin_teach_new/js/channel/teach.js?20160705'
+          },
+          preload: ["admin_teach_new/js/channel/teach"]
+        });
+        seajs.use(["admin_teach_new/js/channel/teach"],
+        function(teach) {
+
+        });
+      </script>
+
+
+
+      <script type="text/javascript">
+        /*
+        * 图标库
+        */
+       seajs.config({
+          alias: {
+            'highcharts': 'http://code.enhance.cn/js/deploy/highcharts/v4.1.5/highcharts.js'
+          }
+        });
+
+       /*
+        * 页面：综合数据情况
+        * 功能：线性图标
+       */
+        seajs.use(['jquery','highcharts'],function($){
+          $('#linechart').highcharts({
+              title: {
+                  text: 'AIO报课情况',
+                  x: -20 //center
+              },
+              /* subtitle: {
+                      text: 'Source: WorldClimate.com',
+                      x: -20
+                  },*/
+              xAxis: {
+                  categories: [20160701, 20160702, 20160703, 20160704, 20160705, 20160706, 20160707, 20160708, 20160709, 20160710, 20160711, 20160712, 20160713, 20160714, 20160715, 20160716, 20160717, 20160718, 20160719, 20160720, 20160721, 20160722, 20160723, 20160724, 20160725, 20160726, 20160727, 20160728, 20160729, 20160730, 20160731, 20160801, 20160802, 20160803]
+              },
+              yAxis: {
+                  title: {
+                      text: '购课人数'
+                  },
+                  plotLines: [{
+                      value: 0,
+                      width: 1,
+                      color: '#808080'
+                  }]
+              },
+              tooltip: {
+                  valueSuffix: '人'
+              },
+              legend: {
+                  layout: 'vertical',
+                  align: 'right',
+                  verticalAlign: 'middle',
+                  borderWidth: 0
+              },
+              series: [{
+                  name: 'TOEFL',
+                  data: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 7, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+              },
+              {
+                  name: 'GRE',
+                  data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+              },
+              {
+                  name: 'GMAT',
+                  data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+              },
+              {
+                  name: 'IELTS',
+                  data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+              }]
+          });
+        })
+      </script>
+  </body>
+
+</html>

@@ -1,0 +1,85 @@
+/*jquery ui弹窗效果第三方样式*/
+.ui-dialog {
+    background-color: #fff;
+    border: 3px solid rgba(128, 145, 179, 0.3);
+    position: absolute;
+    z-index: 99999999;
+}
+.ui-helper-clearfix::before {
+    content: "";
+    display: table;
+}
+.ui-helper-clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.ui-dialog-titlebar {
+    background-color: #f7f8f9;
+    border-bottom: 1px solid #edeff5;
+    color: #59648f;
+    cursor: default;
+    padding: 8px 12px 8px 20px;
+}
+.ui-dialog-titlebar .ui-dialog-title {
+    display: block;
+    float: left;
+    font-size: 16px;
+}
+.ui-dialog-titlebar {
+    color: #59648f;
+    cursor: default;
+}
+.ui-dialog-titlebar .ui-dialog-titlebar-close {
+    /*background: rgba(0, 0, 0, 0) url("/dist/common/css/img/common-ico.png") no-repeat scroll 4px -180px;*/
+    background: rgba(0, 0, 0, 0) no-repeat scroll 4px -180px;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 17px;
+    margin-top: 2px;
+    /*text-indent: -10000px;*/
+    transition: all 0.2s ease-out 0s;
+    width: 17px;
+}
+.ui-dialog .ui-dialog-titlebar-close span {
+    display: block;
+    margin: 1px;
+}
+.g-clearfix::after, .clearfix::after, .ym-clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.ui-dialog .ui-dialog-content {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    overflow: auto;
+    padding: 2em 2em;
+    position: relative;
+}
+.table-mask-layer{
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+}
+/*手写样式，用于调整第三方插件效果*/
+.ui-close-btn{
+    position: relative;
+    right:10px;
+}
+.ui-button-text{
+    text-indent: -10000px;
+}
