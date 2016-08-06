@@ -2,10 +2,15 @@
  * create by wtx 20160806
  * 功能：专用于登录页面的样式
  */
- body{
- 	color:#fff;
- 	padding-bottom: 40px;
- }
+
+/*fontawesome图标样式表*/
+@import url("../public/font-awesome.css");
+
+
+body{
+	color:#fff;
+	padding-bottom: 40px;
+}
 .inner-section{
 	margin-top: 100px;
 }
@@ -14,6 +19,7 @@
 	background:rgba(0,0,0,.35);
 	padding:35px;
 	border-radius: 4px;
+
 }
 .form-top-left{
 	width:75%;

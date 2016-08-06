@@ -9,7 +9,8 @@
 */
 
 
-
+/*fontawesome图标样式*/
+@import url("../mod/public/font-awesome.css");
 /*重置bootstrap 样式*/
 @import url("../mod/public/reset.css");
 /*在bootstrap基础上自定义部分*/
