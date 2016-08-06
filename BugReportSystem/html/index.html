@@ -129,30 +129,22 @@
 			</div>
 		</div>
 	</div>
+	<!--共有模板 每个页面都要加载-->
 	<script src="http://code.enhance.cn/dist/libs/seajs/2.1.0/sea.js" type="text/javascript"></script>
 	<script type="text/javascript">
-	    seajs.config({
-	        base: "../js",
-	        alias: {
-	            'jquery': 'plugin/jquery.min.js',
-	            //"jqueryui": "libs/jqueryui/1.10.3/jqueryui.js",
-	            'teach':'channel/teach.js'
-	        },
-	        preload:['teach']
-	    });
-	    seajs.use('teach', function(teach) {
+    seajs.config({
+        base: "../js",
+        alias: {
+            'jquery': 'plugin/jquery.min.js',
+            //"jqueryui": "libs/jqueryui/1.10.3/jqueryui.js",
+            'teach':'channel/teach.js'
+        },
+        preload:['teach']
+    });
+    seajs.use('teach', function(teach) {
 
-	    });
-
-	    /* 仅用于demo展示 begin */
-	    seajs.use('jquery', function($) {
-	    	$('#js-list a').on('click',function(){
-	    		$('#coursecontent').attr('src',$(this).attr('href'));
-	    		$('#js-page-tile').html($(this).html());
-	    		return  false;
-	    	});
-	    });
-	    /*仅用于demo展示 end*/
+    });
 	</script>
+	<!--共有模板end-->
 </body>
 </html>
