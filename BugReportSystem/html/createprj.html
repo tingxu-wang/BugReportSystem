@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>createprj</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<link rel="stylesheet" href="../css/channel/bootstrap.css" type="text/css"/>
 	<link rel="stylesheet" href="../css/channel/teach.css?20160806" type="text/css"/>
@@ -57,40 +57,36 @@
 					<li>
 						<div class="sidebar-toggler hidden-phone"></div>
 					</li>
-					<li class="start active">
-						<a href="index.html">
-							<i class="icon-cc glyphicon glyphicon-dashboard"></i>
-							<span class="title">控制台</span>
-							<span class="selected"></span>
+					<li class="start">
+						<a href="manager.html">
+							<i class="fa fa-users"></i>
+							<span class="title">我的团队</span>
 						</a>
 					</li>
-					<li>
+					<li class="open">
 						<a href="javascript:;">
-							<i class="icon-cogs glyphicon glyphicon-book"></i>
-							<span class="title">班级情况</span>
+							<i class="fa fa-list-ul"></i>
+							<span class="title">我的项目</span>
 							<span class="arrow open"></span>
 						</a>
-						<ul class="sub-menu" style="display:block">
-							<li>
-								<a href="layout_horizontal_sidebar_menu.html">我的班级</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<i class="icon-cogs glyphicon glyphicon-stats"></i>
-							<span class="title">课程数据</span>
-							<span class="arrow"></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="layout_horizontal_sidebar_menu.html">AIO课程一览</a>
+						<ul class="sub-menu" style="display:block;">
+							<li class="active">
+								<a href="createprj.html">
+									<span class="fa fa-plus-square-o"></span>
+									创建项目
+								</a>
 							</li>
 							<li>
-								<a href="layout_horizontal_sidebar_menu.html">低价课程一览</a>
+								<a href="deleteprj.html">
+									<span class="fa fa-minus-square-o"></span>
+									删除项目
+								</a>
 							</li>
 							<li>
-								<a href="layout_horizontal_sidebar_menu.html">学生异动一览</a>
+								<a href="prjdetail.html">
+									<span class="fa fa-clone"></span>
+									项目总览
+								</a>
 							</li>
 						</ul>
 					</li>
@@ -99,15 +95,30 @@
 			<div class="main-content">
 				<div class="container-fluid">
 					<h3 class="page-title">
-						<!-- <span id="js-page-tile"></span>仅用于展示用，套页面去掉span直接写内容-->
-						<span id="js-page-tile">控制台</span> <small>标题补充</small>
+						<span id="js-page-tile">创建项目</span>
 					</h3>
-					<ol class="breadcrumb">
-					  <li><a href="#"><i class="glyphicon glyphicon-home"></i> 首页</a></li>
-					  <li><a href="#">控制台</a></li>
-					  <li class="active">当前内容</li>
-					</ol>
+					<hr>
+					<form action="" class="form-horizontal">
+						<div class="control-group">
+							<label class="control-label left-site">
+								项目名称
+								<span class="require-warn">*</span>
+							</label>
+							<div class="controls left-site">
+								<input type="text" class="large m-wrap">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label left-site">
+								产品经理ID
+								<span class="require-warn">*</span>
+							</label>
+							<div class="controls left-site">
+								<input type="number" class="large m-wrap">
+							</div>
+						</div>
 
+					</form>
 				</div>
 			</div>
 		</div>

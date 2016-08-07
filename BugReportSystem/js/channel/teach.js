@@ -14,13 +14,13 @@ define(function(require, epxorts, module){
 	require('../mod/public/fullselect');
 	//自适应table
 	require('../mod/public/tableadapt');
-    
+
 	//bootstrap 提示插件
 	$('[data-toggle="tooltip"]').tooltip();
 	$('[data-toggle="popover"]').popover({
 		trigger:'hover'
 	});
-	
+
 });
 
- 
+

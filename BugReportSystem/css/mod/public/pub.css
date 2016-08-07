@@ -86,8 +86,17 @@
     padding-top: 5px;
     text-align: right;
 }
+.form-horizontal .control-label.left-site{/*左对齐的情况*/
+    float: left;
+    width: 80px;
+    padding-top: 5px;
+    text-align: left;
+}
 .form-horizontal .controls{
     margin-left: 180px;
+}
+.form-horizontal .controls.left-site{/*左对齐的情况*/
+    margin-left: 90px;
 }
 .form-horizontal .controls .help-inline{
     margin-top: 6px;
@@ -164,14 +173,14 @@
     min-width:320px;
 }
 @media(max-width: 480px) {
-    .form-horizontal .control-label {
+    .form-horizontal .control-label, .form-horizontal .control-label.left-site{
         float: none;
         width: auto;
         padding-top: 0;
         text-align: left
     }
 
-    .form-horizontal .controls {
+    .form-horizontal .controls,.form-horizontal .controls.left-site {
         margin-left: 0
     }
 
@@ -274,7 +283,6 @@
 }
 .dataTables_info{
     padding-top: 7px;
-    margin-left: 12px;
 }
 .select-checkbox-text{
     margin-left: 5px;
@@ -306,6 +314,7 @@
 }
 .dataTables_wrapper .table{
     font-size: 12px;
+    min-width: 530px;
 }
 /*有选择头的表格的‘显示详细数据’的样式 实例：课程数据-公开课一览 复选框*/
 .hideshow{

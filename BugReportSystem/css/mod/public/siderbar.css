@@ -284,6 +284,7 @@ Sidebar toggler(show/hide)
   opacity: 0.5;
   filter: alpha(opacity=50);
   margin-top: 15px;
+  margin-bottom: 15px;
   margin-left: 175px;
   width: 29px;
   height: 29px;

@@ -3,16 +3,6 @@
 *共用头和左侧边栏
 *重置的bootstrap
 */
-@font-face {
-  font-family: 'Glyphicons Halflings';
-
-  src: url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.eot');
-  src: url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-   url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.woff2') format('woff2'), 
-   url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.woff') format('woff'), 
-   url('/dist/admin_teach_new/css/img/glyphicons-halflings-regular.ttf') format('truetype'), 
-  url('/dist/admin_teach_new/css/img/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
 body{
 	 font: 14px/1.5 Arial, 'Hiragino Sans GB', 微软雅黑, 'Microsoft Yahei';
 	 background:#3d3d3d !important;
@@ -31,14 +21,14 @@ body{
 	float: left;
 }
 .navbar-nav > li > a {
-     padding-top: 10px; 
-     padding-bottom: 10px; 
+     padding-top: 10px;
+     padding-bottom: 10px;
      line-height:25px;
 }
 @media (min-width: 768px){
 	.navbar-nav > li > a {
-	     padding-top: 10px; 
-	     padding-bottom: 10px; 
+	     padding-top: 10px;
+	     padding-bottom: 10px;
 	}
 }
 @media (max-width: 768px){

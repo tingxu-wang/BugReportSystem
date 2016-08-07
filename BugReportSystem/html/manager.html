@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>superManager</title>
+	<title>manager</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<link rel="stylesheet" href="../css/channel/bootstrap.css" type="text/css"/>
 	<link rel="stylesheet" href="../css/channel/teach.css?20160806" type="text/css"/>
@@ -58,45 +58,45 @@
 						<div class="sidebar-toggler hidden-phone"></div>
 					</li>
 					<li class="start active">
-						<a href="superManager.html">
-							<i class="fa fa-sitemap"></i>
-							<span class="title">项目管理</span>
+						<a href="manager.html">
+							<i class="fa fa-users"></i>
+							<span class="title">我的团队</span>
 							<span class="selected"></span>
 						</a>
 					</li>
 					<li>
 						<a href="javascript:;">
-							<i class="fa fa-users"></i>
-							<span class="title">账号管理</span>
+							<i class="fa fa-list-ul"></i>
+							<span class="title">我的项目</span>
 							<span class="arrow"></span>
 						</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="create.html">
-									<span class="fa fa-user-plus"></span>
-									账号创建
+								<a href="createprj.html">
+									<span class="fa fa-plus-square-o"></span>
+									创建项目
 								</a>
 							</li>
 							<li>
-								<a href="delete.html">
-									<span class="fa fa-user-times"></span>
-									账号删除
+								<a href="deleteprj.html">
+									<span class="fa fa-minus-square-o"></span>
+									删除项目
+								</a>
+							</li>
+							<li>
+								<a href="prjdetail.html">
+									<span class="fa fa-clone"></span>
+									项目总览
 								</a>
 							</li>
 						</ul>
-					</li>
-					<li>
-						<a href="memberView.html">
-							<i class="fa fa-list"></i>
-							<span class="title">人员信息一览</span>
-						</a>
 					</li>
 				</ul>
 			</div>
 			<div class="main-content">
 				<div class="container-fluid">
 					<h3 class="page-title">
-						<span id="js-page-tile">项目管理</span>
+						<span id="js-page-tile">我的团队</span>
 					</h3>
 					<hr>
 					<form action="" class="form-horizontal">
@@ -108,8 +108,9 @@
 							<div class="controls left-site">
 					      <select name="" id="" class="large m-wrap">
 					      	<option value="">请选择</option>
-					      	<option value="">全部项目</option>
-					      	<option value="">按产品经理划分</option>
+					      	<option value="">全部人员</option>
+					      	<option value="">程序员</option>
+					      	<option value="">产品经理</option>
 								</select>
 					    </div>
 						</div>
@@ -119,24 +120,27 @@
 					    <table class="table table-striped table-bordered table-hover">
 					      <thead>
 					      	<tr>
-					        	<th>项目名称</th>
-					        	<th>产品经理ID</th>
-					        	<th>产品经理用户名</th>
-					        	<th>项目简介</th>
+					        	<th>Id</th>
+					        	<th>用户名</th>
+					        	<th>账号类别</th>
+					        	<th>性别</th>
+					        	<th>个人简介</th>
 					        </tr>
 					      </thead>
 					      <tbody>
 					      	<tr>
-					      		<td>Bug管理系统</td>
-					      		<td>000</td>
-					      		<td>Martin</td>
-					      		<td>企业项目Bug管理平台</td>
+					      		<td>123</td>
+					      		<td>tingxu.wang</td>
+					      		<td>程序员</td>
+					      		<td>男</td>
+					      		<td>前端工程师</td>
 					      	</tr>
 					      	<tr>
-					      		<td>版本控制平台</td>
-					      		<td>001</td>
-					      		<td>john</td>
-					      		<td>具备版本回溯以及更新的综合平台</td>
+					      		<td>456</td>
+					      		<td>liuquan.ding</td>
+					      		<td>程序员</td>
+					      		<td>男</td>
+					      		<td>JAVA工程师</td>
 					      	</tr>
 					      </tbody>
 					    </table>

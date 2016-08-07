@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>superManager</title>
+	<title>memberView</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<link rel="stylesheet" href="../css/channel/bootstrap.css" type="text/css"/>
 	<link rel="stylesheet" href="../css/channel/teach.css?20160806" type="text/css"/>
@@ -57,7 +57,7 @@
 					<li>
 						<div class="sidebar-toggler hidden-phone"></div>
 					</li>
-					<li class="start active">
+					<li>
 						<a href="superManager.html">
 							<i class="fa fa-sitemap"></i>
 							<span class="title">项目管理</span>
@@ -85,10 +85,11 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="start active">
 						<a href="memberView.html">
 							<i class="fa fa-list"></i>
 							<span class="title">人员信息一览</span>
+							<span class="selected"></span>
 						</a>
 					</li>
 				</ul>
@@ -96,20 +97,22 @@
 			<div class="main-content">
 				<div class="container-fluid">
 					<h3 class="page-title">
-						<span id="js-page-tile">项目管理</span>
+						<span id="js-page-tile">人员信息一览</span>
 					</h3>
 					<hr>
 					<form action="" class="form-horizontal">
 						<div class="control-group">
 							<label id="" class="control-label left-site">
-								筛选条件
+								账号类别
 								<span class="require-warn">*</span>
 							</label>
 							<div class="controls left-site">
 					      <select name="" id="" class="large m-wrap">
-					      	<option value="">请选择</option>
-					      	<option value="">全部项目</option>
-					      	<option value="">按产品经理划分</option>
+					      	<option value="">全部人员</option>
+									<option value="">程序员</option>
+									<option value="">产品经理</option>
+									<option value="">测试人员</option>
+									<option value="">管理员</option>
 								</select>
 					    </div>
 						</div>
@@ -119,24 +122,27 @@
 					    <table class="table table-striped table-bordered table-hover">
 					      <thead>
 					      	<tr>
-					        	<th>项目名称</th>
-					        	<th>产品经理ID</th>
-					        	<th>产品经理用户名</th>
-					        	<th>项目简介</th>
+					        	<th>Id</th>
+					        	<th>用户名</th>
+					        	<th>账号类别</th>
+					        	<th>性别</th>
+					        	<th>个人简介</th>
 					        </tr>
 					      </thead>
 					      <tbody>
 					      	<tr>
-					      		<td>Bug管理系统</td>
-					      		<td>000</td>
-					      		<td>Martin</td>
-					      		<td>企业项目Bug管理平台</td>
+					      		<td>123</td>
+					      		<td>tingxu.wang</td>
+					      		<td>程序员</td>
+					      		<td>男</td>
+					      		<td>前端工程师</td>
 					      	</tr>
 					      	<tr>
-					      		<td>版本控制平台</td>
-					      		<td>001</td>
-					      		<td>john</td>
-					      		<td>具备版本回溯以及更新的综合平台</td>
+					      		<td>456</td>
+					      		<td>liuquan.ding</td>
+					      		<td>程序员</td>
+					      		<td>男</td>
+					      		<td>JAVA工程师</td>
 					      	</tr>
 					      </tbody>
 					    </table>
