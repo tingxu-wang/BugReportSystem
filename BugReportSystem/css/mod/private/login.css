@@ -39,3 +39,11 @@ body{
 .form-bottom input[type=text]{
 	height:46px;
 }
+.login-error{
+	color:red;
+	font-size: 17px;
+}
+
+
+
+
