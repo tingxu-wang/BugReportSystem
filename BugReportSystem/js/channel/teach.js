@@ -3,23 +3,31 @@
 * 新teach后台共用js
 */
 define(function(require, epxorts, module){
-	require('jquery');
+	require('jquery')
+	//jquery.cookie
+	require('cookie')
     // bootstrap 事件
-	require('../plugin/bootstrap');
+	require('../plugin/bootstrap')
     // 左侧边栏
-	require('../mod/public/sider');
+	require('../mod/public/sider')
 	// 多选重写
-	require('../mod/public/mutiselect');
+	require('../mod/public/mutiselect')
 	// 全选功能
-	require('../mod/public/fullselect');
+	require('../mod/public/fullselect')
 	//自适应table
-	require('../mod/public/tableadapt');
+	require('../mod/public/tableadapt')
+	//登陆
+	require('./login')
+	//超管
+	require('./superManager')
+	//账号创建
+	require('./createCount')
 
 	//bootstrap 提示插件
-	$('[data-toggle="tooltip"]').tooltip();
+	$('[data-toggle="tooltip"]').tooltip()
 	$('[data-toggle="popover"]').popover({
 		trigger:'hover'
-	});
+	})
 
 });
 

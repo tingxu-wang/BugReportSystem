@@ -36,13 +36,10 @@ body{
 .form-bottom{
 	margin-top: 30px;
 }
-.form-bottom input[type=text]{
+.form-bottom input{
 	height:46px;
 }
-.login-error{
-	color:red;
-	font-size: 17px;
-}
+
 
 
 

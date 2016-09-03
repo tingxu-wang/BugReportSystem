@@ -93,47 +93,59 @@
 								<span class="require-warn">*</span>
 							</label>
 							<div class="controls left-site">
-					      <select name="" id="" class="large m-wrap">
-									<option value="">程序员</option>
-									<option value="">产品经理</option>
-									<option value="">测试人员</option>
-									<option value="">管理员</option>
+						        <select name="code" class="large m-wrap">
+									<option value="1">管理员</option>
+									<option value="2">产品经理</option>
+									<option value="3">程序员</option>
+									<option value="4">测试人员</option>
+									<option value="5">用户</option>
 								</select>
-					    </div>
+						    </div>
 						</div>
 						<div class="control-group">
-					    <label class="control-label left-site">
-					    	用户名
-					    	<span class="require-warn">*</span>
-					    </label>
-					    <div class="controls left-site">
-					      <input type="text" class="large m-wrap">
+						    <label class="control-label left-site">
+						    	用户名
+						    	<span class="require-warn">*</span>
+						    </label>
+						    <div class="controls left-site">
+						      <input type="text" class="large m-wrap" name="name">
+						    </div>
 					    </div>
-					  </div>
-					  <div class="control-group">
-					    <label class="control-label left-site">
-					    	密码
-					    </label>
-					    <div class="controls left-site">
-					      <input type="text" class="large m-wrap" value="admin" disabled>
+					    <div class="control-group">
+						    <label class="control-label left-site">
+						    	密码
+						    </label>
+						    <div class="controls left-site">
+						      <input type="text" class="large m-wrap" value="admin" name="pass" disabled>
+						    </div>
 					    </div>
-					  </div>
-					  <div class="control-group hidden">
+					    <div class="control-group hidden js-pm-wrap">
 							<label id="" class="control-label left-site">
-								直属产品经理
+								直属产品经理id
 								<span class="require-warn">*</span>
 							</label>
-							<div class="controls left-site">
-					      <select name="" id="" class="large m-wrap">
-									<option value="">人名</option>
-									<option value="">人名</option>
-									<option value="">人名</option>
-								</select>
-					    </div>
+					        <div class="controls left-site">
+					        	<input type="text" class="large m-wrap" name="uid">
+					        </div>
+						</div>
+						<div class="control-group hidden js-project-wrap">
+							<label id="" class="control-label left-site">
+								直属项目id
+								<span class="require-warn">*</span>
+							</label>
+					        <div class="controls left-site">
+					        	<input type="text" class="large m-wrap" name="pid">
+					        </div>
+						</div>
+						<div class="control-group">
+							<span class="errorText js-submit-error hidden"></span>
+						</div>
+						<div class="control-group">
+							<span class="text-success js-submit-success hidden"></span>
 						</div>
 						<div class="control-group">
 							<div class="controls left-site">
-								<button class="btn btn-primary">提交</button>
+								<button class="btn btn-primary js-createCount-submit">提交</button>
 							</div>
 						</div>
 					</form>
@@ -148,7 +160,8 @@
         base: "../js",
         alias: {
             'jquery': 'plugin/jquery.min.js',
-            'teach':'channel/teach.js'
+            'teach':'channel/teach.js',
+            'cookie':'plugin/cookie.js'
         },
         preload:['teach']
     });

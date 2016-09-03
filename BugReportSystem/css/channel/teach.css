@@ -23,3 +23,9 @@
 @import url("../mod/public/plugin.css");
 /*仅单页应用样式部分*/
 @import url("../mod/public/page.css");
+
+
+.errorText{
+	color:red;
+	font-size: 17px;
+}

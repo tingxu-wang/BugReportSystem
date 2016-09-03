@@ -195,7 +195,8 @@
         base: "../js",
         alias: {
             'jquery': 'plugin/jquery.min.js',
-            'teach':'channel/teach.js'
+            'teach':'channel/teach.js',
+            'cookie':'plugin/cookie.js'
         },
         preload:['teach']
     });
@@ -204,5 +205,10 @@
     });
 	</script>
 	<!--共有模板end-->
+	<script type="text/javascript">
+		seajs.use(['jquery'],function($){
+			
+		})
+	</script>
 </body>
 </html>

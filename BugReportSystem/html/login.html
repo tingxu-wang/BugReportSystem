@@ -6,6 +6,7 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<link rel="stylesheet" href="../css/channel/bootstrap.css" type="text/css"/>
 	<link rel="stylesheet" href="../css/mod/private/login.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/channel/teach.css?20160806" type="text/css"/>
 </head>
 <body>
 	<div class="container">
@@ -33,13 +34,13 @@
 									<input type="text" class="form-control" name="name" placeholder="用户名">
 								</div>
 								<div class="form-group">
-									<input type="text" class="form-control" name="pass" placeholder="密码">
+									<input type="password" class="form-control" name="pass" placeholder="密码">
 								</div>
 								<div class="form-group">
-									<span class="login-error hidden">用户名或密码填写错误，请重试</span>
+									<span class="errorText js-submit-error hidden">用户名或密码填写错误，请重试</span>
 								</div>
 								<div class="form-group">
-									<button class="btn btn-default btn-primary btn-lg btn-block js-submit-btn" type="button">登陆</button>
+									<button class="btn btn-default btn-primary btn-lg btn-block js-login-submit" type="button">登陆</button>
 								</div>
 							</form>
 						</div>
@@ -65,7 +66,7 @@
     });
 	</script>
 	<script type="text/javascript">
-		seajs.use(['jquery','plugin/jquery.backstretch.min.js','channel/login.js'],function($){
+		seajs.use(['jquery','plugin/jquery.backstretch.min.js'],function($){
 			$.backstretch('../css/img/login_bg/2.jpg')
 		})
 	</script>
