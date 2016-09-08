@@ -1,4 +1,46 @@
+{{ if code==1 }}
+<!-- superManager -->
+<li>
+	<div class="sidebar-toggler hidden-phone"></div>
+</li>
+<li class="start active">
+	<a href="superManager.html">
+		<i class="fa fa-sitemap"></i>
+		<span class="title">项目管理</span>
+		<span class="selected"></span>
+	</a>
+</li>
+<li>
+	<a href="javascript:;">
+		<i class="fa fa-users"></i>
+		<span class="title">账号管理</span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="create.html">
+				<span class="fa fa-user-plus"></span>
+				账号创建
+			</a>
+		</li>
+		<li>
+			<a href="deleteCount.html">
+				<span class="fa fa-user-times"></span>
+				账号删除
+			</a>
+		</li>
+	</ul>
+</li>
+<li>
+	<a href="memberView.html">
+		<i class="fa fa-list"></i>
+		<span class="title">人员信息一览</span>
+	</a>
+</li>
+{{ /if }}
+
 {{ if code==2 }}
+<!-- PM -->
 <li>
 	<div class="sidebar-toggler hidden-phone"></div>
 </li>

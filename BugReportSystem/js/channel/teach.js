@@ -3,6 +3,11 @@
 * 新teach后台共用js
 */
 define(function(require, epxorts, module){
+	//seajs tpl加载插件
+	require('../plugin/sea-tpl')
+
+	window.template=require('../plugin/template.3.0')
+
 	require('jquery')
 	//jquery.cookie
 	require('cookie')

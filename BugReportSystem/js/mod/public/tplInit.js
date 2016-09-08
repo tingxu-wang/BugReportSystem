@@ -4,5 +4,7 @@
 */
 
 define(function (require,exports,module){
+	var sidebarTpl=require('../../../tpl/sidebar.tpl')
+
 	
 })
