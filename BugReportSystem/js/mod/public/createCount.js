@@ -1,5 +1,5 @@
 define(function (require,exports,module){
-	var ajaxInit=require('channel/ajaxInit.js')
+	var ajaxInit=require('./ajaxInit.js')
 
 	$('select[name="code"]').on('change',function(){
 		var $option=$(this).find('option:selected'),

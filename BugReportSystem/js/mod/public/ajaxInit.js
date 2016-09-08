@@ -1,5 +1,5 @@
 define(function (require,exports,module){
 	return {
-		url:'http://172.30.37.1:8080/SSH'
+		url:'http://115.28.243.24:8080/SSH'
 	}
 })

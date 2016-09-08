@@ -1,9 +1,12 @@
 define(function (require,exports,module){
-	var ajaxInit=require('channel/ajaxInit.js')
+	var $=require('jquery')
+	var ajaxInit=require('../public/ajaxInit.js')
+
+	require('cookie')
 
 	//'http://192.168.23.2:8080/SSH/login'
 /*
-	$.post('http://192.168.23.1:8080/SSH/login?name=admin&pass=admin',function(data){
+	$.post('http://115.28.243.24:8080/SSH/login?name=admin&pass=admin',function(data){
 		//{"uid":null,"name":"admin","pid":null,"code":"1","password":"admin"}
 
 		var str=JSON.stringify(data)
@@ -18,7 +21,6 @@ define(function (require,exports,module){
 		e.preventDefault()
 
 		$.post(ajaxInit.url+'/login',$('form').serialize(),function(data){
-			console.log(data)
 			//{"uid":null,"name":"admin","pid":null,"code":"1","password":"admin"}
 			if(data==0){
 				$('.js-submit-error').removeClass('hidden')
@@ -28,7 +30,7 @@ define(function (require,exports,module){
 				$.cookie('pid',data.pid)
 				$.cookie('code',data.code)
 				$.cookie('password',data.password)
-				console.log($.cookie('name'))
+
 				if(data.code==1){//超管
 					window.location.href='superManager.html'
 				}else if(data.code==2){//PM
@@ -36,7 +38,7 @@ define(function (require,exports,module){
 				}else if(data.code==3){//程序员
 					//window.location.href='coder.html'
 				}else if(data.code==4){//测试
-					//window.location.href='test.html'		
+					//window.location.href='tester.html'		
 				}else if(data.code==5){//用户
 					//window.location.href='user.html'
 				}

@@ -6,6 +6,8 @@ define(function(require, epxorts, module){
 	require('jquery')
 	//jquery.cookie
 	require('cookie')
+	//全局模板初始化
+	require('../mod/public/tplInit')
     // bootstrap 事件
 	require('../plugin/bootstrap')
     // 左侧边栏
@@ -16,12 +18,8 @@ define(function(require, epxorts, module){
 	require('../mod/public/fullselect')
 	//自适应table
 	require('../mod/public/tableadapt')
-	//登陆
-	require('./login')
 	//超管
 	require('./superManager')
-	//账号创建
-	require('./createCount')
 
 	//bootstrap 提示插件
 	$('[data-toggle="tooltip"]').tooltip()

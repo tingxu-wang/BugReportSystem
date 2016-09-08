@@ -395,3 +395,19 @@
     width:300px;
     height:100px;
 }
+
+
+
+/* bug系统共有部分 */
+.errorText{
+    color:red;
+    font-size: 17px;
+}
+.deleteRow{
+    padding:5px;
+}
+.deleteRow:hover{
+    background: #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
