@@ -90,3 +90,15 @@
 	</a>
 </li>
 {{ /if }}
+{{ if code==5}}
+<li>
+	<div class="sidebar-toggler hidden-phone"></div>
+</li>
+<li class="start active">
+	<a href="prjDetail.html">
+		<i class="fa fa-sitemap"></i>
+		<span class="title">项目明细</span>
+		<span class="selected"></span>
+	</a>
+</li>
+{{ /if }}

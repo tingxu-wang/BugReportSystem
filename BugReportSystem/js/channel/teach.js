@@ -4,8 +4,9 @@
 */
 define(function (require, epxorts, module){
 	//seajs tpl加载插件
-	require('../plugin/sea-tpl')
-
+	/*require('../plugin/sea-tpl')*/
+	
+	//加载template
 	window.template=require('../plugin/template.3.0')
 
 	require('jquery')

@@ -13,7 +13,7 @@
    </button>
    <ul class="nav navbar-nav pull-right cus-navbar-nav">
     <li class="dropdown cus-user">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 		<span class="username">{{ name }}</span>
       	<span class="caret"></span></a>
       <ul class="dropdown-menu">

@@ -125,12 +125,14 @@
 	</div>
 	<!--共有模板 每个页面都要加载-->
 	<script src="http://code.enhance.cn/dist/libs/seajs/2.1.0/sea.js" type="text/javascript"></script>
+	<script src="../js/plugin/sea-tpl.js" type="text/javascript"></script>
 	<script type="text/javascript">
     seajs.config({
         base: "../js",
         alias: {
             'jquery': 'plugin/jquery.min.js',
-            'teach':'channel/teach.js'
+            'teach':'channel/teach.js',
+            'cookie':'plugin/cookie.js'
         },
         preload:['teach']
     });
