@@ -4,19 +4,10 @@ define(function (require,exports,module){
 
 	require('cookie')
 
-	//'http://192.168.23.2:8080/SSH/login'
-/*
-	$.post('http://115.28.243.24:8080/SSH/login?name=admin&pass=admin',function(data){
-		//{"uid":null,"name":"admin","pid":null,"code":"1","password":"admin"}
-
-		var str=JSON.stringify(data)
-		console.log(str)
-	},'json')*/
-
 
 	$('.js-login-submit').on('click',function(e){
-		var name=$('input[name="name"]').val(),//用户名
-			pass=$('input[name="pass"]').val()//密码	
+		var name=$('input[name="name"]').val().trim(),//用户名
+			pass=$('input[name="pass"]').val().trim()//密码	
 
 		e.preventDefault()
 
@@ -31,16 +22,22 @@ define(function (require,exports,module){
 				$.cookie('code',data.code)
 				$.cookie('password',data.password)
 
-				if(data.code==1){//超管
+/*				if(data.code==1){//超管
 					window.location.href='superManager.html'
 				}else if(data.code==2){//PM
 					window.location.href='manager.html'
 				}else if(data.code==3){//程序员
-					//window.location.href='coder.html'
+					window.location.href='coder.html'
 				}else if(data.code==4){//测试
 					//window.location.href='tester.html'		
 				}else if(data.code==5){//用户
 					//window.location.href='user.html'
+				}*/
+
+				if(data.code==1 || data.code==2 || data.code==3 || data.code==4){//超管 PM 程序员 测试
+					window.location.href='prjView.html'
+				}else{//用户
+					window.location.href='user.html'
 				}
 			}
 		},'json')		

@@ -2,7 +2,7 @@
 * create by rmz 20160726
 * 新teach后台共用js
 */
-define(function(require, epxorts, module){
+define(function (require, epxorts, module){
 	//seajs tpl加载插件
 	require('../plugin/sea-tpl')
 
@@ -23,8 +23,10 @@ define(function(require, epxorts, module){
 	require('../mod/public/fullselect')
 	//自适应table
 	require('../mod/public/tableadapt')
-	//超管
-	require('./superManager')
+	//创建账号
+	require('../mod/public/createCount')
+	//项目总览table
+	require('../mod/public/prjTable')
 
 	//bootstrap 提示插件
 	$('[data-toggle="tooltip"]').tooltip()

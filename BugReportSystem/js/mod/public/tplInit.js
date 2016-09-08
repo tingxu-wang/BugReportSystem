@@ -4,11 +4,16 @@
 */
 
 define(function (require,exports,module){
-	var sidebarTpl=require('../../../tpl/sidebar.tpl')
-	var render=template.compile(sidebarTpl)
+	var sidebarTpl=require('../../../tpl/sidebar.tpl'),
+		sidebarRender=template.compile(sidebarTpl)
 
-	$('.page-sidebar-menu').html(render({code:$.cookie('code')}))
+	var navbarTpl=require('../../../tpl/navbar.tpl'),
+		navbarRender=template.compile(navbarTpl)
 
-	$('.cus-user .username').html($.cookie('name'))
+	var obj=require('./cookieObj')
+
+	$('.page-sidebar-menu').html(sidebarRender(obj))
+	$('.cus-navbar-inner').html(navbarRender(obj))
+
 	
 })

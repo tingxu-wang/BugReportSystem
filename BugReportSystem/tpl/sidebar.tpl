@@ -78,3 +78,15 @@
 	</ul>
 </li>
 {{ /if }}
+{{ if code==3 || code==4 }}
+<li>
+	<div class="sidebar-toggler hidden-phone"></div>
+</li>
+<li class="start active">
+	<a href="prjView.html">
+		<i class="fa fa-sitemap"></i>
+		<span class="title">项目总揽</span>
+		<span class="selected"></span>
+	</a>
+</li>
+{{ /if }}
