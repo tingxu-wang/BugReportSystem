@@ -1,3 +1,8 @@
+/*
+* edit by wtx 20160909
+* 添加性别字段
+*/
+
 define(function (require,exports,module){
 	var ajaxInit=require('./ajaxInit.js')
 
@@ -18,19 +23,21 @@ define(function (require,exports,module){
 		var $pmWrap=$('.js-pm-wrap'),
 			$prjWrap=$('.js-project-wrap'),
 			$pm=$('input[name="uid"]'),
-			$prj=$('input[name="pid"]')
+			$prj=$('input[name="pid"]'),
+			$sex=$('input[name="sex"]:checked')
 
 		var obj={
 			name:$('input[name="name"]').val(),//用户名
 			pass:$('input[name="pass"]').val(),
-			code:$('select[name="code"] option:selected').val()
+			code:$('select[name="code"] option:selected').val(),
+			sex:$sex.val()
 		}
 
 		$('.js-submit-error,.js-submit-success').addClass('hidden')
 
 		e.preventDefault()
 
-		if( (!$pmWrap.hasClass('hidden') && $pm.val()==0) || (!$prjWrap.hasClass('hidden') && $prj.val()==0) || obj.name==0 ){
+		if( (!$pmWrap.hasClass('hidden') && $pm.val()==0) || (!$prjWrap.hasClass('hidden') && $prj.val()==0) || obj.name==0 || $sex.val()===undefined || obj.code==='0'){
 			$('.js-submit-error').text('请填写全所有必填项').removeClass('hidden')
 			return
 		}
