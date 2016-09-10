@@ -21,7 +21,7 @@ define(function (require,exports,module){
 				$.cookie('pid',data.pid)
 				$.cookie('code',data.code)
 				$.cookie('password',data.password)
-				$.cookie('sex',data.sex),
+				$.cookie('sex',data.sex)
 				$.cookie('id',data.id)
 
 /*				if(data.code==1){//超管

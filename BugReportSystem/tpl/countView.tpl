@@ -17,7 +17,7 @@
 	</div>
 </form>
 <div class="dataTables_wrapper">
-	    <div class="table-responsive">
+    <div class="table-responsive">
 	    <table class="table table-striped table-bordered table-hover">
 	      <thead>
 	      	<tr>
@@ -100,5 +100,5 @@
 	        </ul>
 	      </div>
 	    </div>
-	    </div>
+    </div>
 </div>

@@ -10,15 +10,8 @@ define(function (require,exports,module){
 	var tpl=require('../../../tpl/countView.tpl'),//展示全部人员信息的模板
 		render=template.compile(tpl)
 
+	function getUser(infoObj){//传参空字符串（''）表示获取全部数据
 
-	function getUser(obj){//obj传参空字符串（''）表示获取全部数据
-		if(arguments.length){
-
-		}else{
-			$.post(ajaxInit.url+'/getUser',function(data){
-				console.log(data)
-			})				
-		}
 
 	}
 	
