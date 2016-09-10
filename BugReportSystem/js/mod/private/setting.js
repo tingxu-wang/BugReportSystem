@@ -6,9 +6,12 @@
 
 define(function (require,exports,module){
 	var settingTpl=require('../../../tpl/setting.tpl'),
-		render=template.compile(settingTpl)
+		render=template.compile(settingTpl),
+		obj=require('../public/cookieObj')
+
+	console.log(obj)
 	
-	$('.js-setting-template').html(render())
+	$('.js-setting-template').html(render(obj))
 
 
 	$('.js-setting-submit').on('click',function(e){

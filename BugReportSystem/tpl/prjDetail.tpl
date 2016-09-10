@@ -18,22 +18,19 @@
 			项目ID
 		</label>
 		<div class="controls left-site">
-      <div class="form-control-static">
-      	这里填写项目ID
-      </div>
-    </div>
+	        <div class="form-control-static">
+	      	    这里填写项目ID
+	        </div>
+	    </div>
 	</div>
 	<div class="control-group">
 		<label id="" class="control-label left-site">
-			筛选条件
-			<span class="require-warn">*</span>
+			项目简介
 		</label>
 		<div class="controls left-site">
-	      <select name="" id="" class="large m-wrap">
-	      	<option value="">请选择</option>
-	      	<option value="">全部项目</option>
-	      	<option value="">按产品经理划分</option>
-				</select>
+	        <div class="form-control-static">
+	      	    这里填写项目简介
+	        </div>
 	    </div>
 	</div>
 	{{ if code!=3 }}
@@ -63,7 +60,7 @@
 									<span class="require-warn">*</span>
 								</label>
 								<div class="controls left-site">
-									<div class="requireLevel">
+									<div class="js-requireLevel">
 										<span class="fa fa-star-o"></span>
 										<span class="fa fa-star-o"></span>
 										<span class="fa fa-star-o"></span>
@@ -202,6 +199,7 @@
 	        	<th>需求等级</th>
 	        	<th>添加日期</th>
 	        	<th>bug内容摘要</th>
+	        	<th>完成时间</th>
 	        </tr>
 	      </thead>
 	      <tbody>
@@ -216,6 +214,7 @@
 	      		</td>
 	      		<td>2016-08-07 08:36</td>
 	      		<td>这里填写详细信息</td>
+	      		<td>2016-08-07 08:36</td>
 	      	</tr>
 	      	<tr>
 	      		<td>prj.html用户名获取无法显示</td>
@@ -228,6 +227,7 @@
 	      		</td>
 	      		<td>2016-08-07 21:36</td>
 	      		<td>这里填写详细信息</td>
+	      		<td>2016-08-07 08:36</td>
 	      	</tr>
 	      </tbody>
 	    </table>

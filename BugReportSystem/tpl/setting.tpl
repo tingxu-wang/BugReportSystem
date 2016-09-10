@@ -8,7 +8,7 @@
 			用户名
 		</label>
 		<div class="controls left-site">
-			<input type="text" class="large m-wrap" name="name" disabled="">
+			<input type="text" class="large m-wrap" name="name" disabled="" value="{{ name }}">
 		</div>
 	</div>
 	<div class="control-group">
@@ -32,17 +32,19 @@
 			账号id
 		</label>
 		<div class="controls left-site">
-			<input type="text" class="large m-wrap" name="id" disabled="">
+			<input type="text" class="large m-wrap" name="id" disabled="" value="{{ id }}">
 		</div>
 	</div>
+	{{ if code==3 || code==4 }}
 	<div class="control-group">
 		<label class="control-label left-site">
 			负责产品经理ID
 		</label>
 		<div class="controls left-site">
-			<input type="text" class="large m-wrap" name="uid" disabled="">
+			<input type="text" class="large m-wrap" name="uid" disabled="" value="{{ uid }}">
 		</div>
 	</div>
+	{{ /if }}
 	<div class="control-group js-setting-submit-error hidden">
 		<div class="controls left-site">
 			<span class="text-danger"></span>

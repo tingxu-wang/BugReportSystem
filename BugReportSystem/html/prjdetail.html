@@ -58,8 +58,8 @@
 		seajs.use('jquery',function($){
 			var indexCache=-1
 
-			$('.requireLevel')
-			.on('mouseenter','span',function(){
+			$('.container-fluid')
+			.on('mouseenter','.js-requireLevel span',function(){
 				var $this=$(this),
 						$requireLevel=$this.parent(),
 						$span=$requireLevel.find('span'),
@@ -71,7 +71,7 @@
 					}
 				})
 			})
-			.on('mouseleave','span',function(){
+			.on('mouseleave','.js-requireLevel span',function(){
 				var $this=$(this),
 						$requireLevel=$this.parent(),
 						$span=$requireLevel.find('span'),
@@ -83,7 +83,7 @@
 					}
 				})
 			})
-			.on('click','span',function(){
+			.on('click','.js-requireLevel span',function(){
 				var $this=$(this),
 						$requireLevel=$this.parent(),
 						$span=$requireLevel.find('span'),

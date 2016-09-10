@@ -11,6 +11,7 @@ define(function (require,exports,module){
 		pid:$.cookie('pid'),
 		uid:$.cookie('uid'),
 		password:$.cookie('password'),
-		sex:$.cookie('sex')
+		sex:$.cookie('sex'),
+		id:$.cookie('id')
 	}
 })
