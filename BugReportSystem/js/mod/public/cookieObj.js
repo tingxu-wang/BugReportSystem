@@ -10,6 +10,7 @@ define(function (require,exports,module){
 		name:$.cookie('name'),
 		pid:$.cookie('pid'),
 		uid:$.cookie('uid'),
-		password:$.cookie('password')
+		password:$.cookie('password'),
+		sex:$.cookie('sex')
 	}
 })

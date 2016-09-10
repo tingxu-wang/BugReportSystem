@@ -21,6 +21,7 @@ define(function (require,exports,module){
 				$.cookie('pid',data.pid)
 				$.cookie('code',data.code)
 				$.cookie('password',data.password)
+				$.cookie('sex',data.sex)
 
 /*				if(data.code==1){//超管
 					window.location.href='superManager.html'

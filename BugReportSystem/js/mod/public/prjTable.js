@@ -2,7 +2,7 @@
 * create by wtx 20160908
 */
 define(function (require, epxorts, module){
-	$('.container-fluid').on('click','.js-prj-table tr',function(){
+	$('.container-fluid').on('click','.js-prj-table tbody tr',function(){
 		var $this=$(this),
 			pid=$(this).find('td').eq(1).text().trim()//单行项目id
 
