@@ -18,7 +18,7 @@
 			<span class="require-warn">*</span>
 		</label>
 		<div class="controls left-site">
-	    	<textarea class="tea-wrap large" name="info"></textarea>
+	    	<textarea class="tea-wrap large" name="intro"></textarea>
 	    </div>
 	</div>
 	<div class="control-group js-setting-submit-error hidden">
