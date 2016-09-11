@@ -19,32 +19,8 @@
 				</ul>
 			</div>
 			<div class="main-content">
-				<div class="container-fluid">
-					<h3 class="page-title">
-						<span id="js-page-tile">创建项目</span>
-					</h3>
-					<hr>
-					<form action="" class="form-horizontal">
-						<div class="control-group">
-							<label class="control-label left-site">
-								项目名称
-								<span class="require-warn">*</span>
-							</label>
-							<div class="controls left-site">
-								<input type="text" class="large m-wrap">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label left-site">
-								产品经理ID
-								<span class="require-warn">*</span>
-							</label>
-							<div class="controls left-site">
-								<input type="number" class="large m-wrap">
-							</div>
-						</div>
-
-					</form>
+				<div class="container-fluid js-createPrj-load">
+					<!-- 加载模板createPrj.tpl -->
 				</div>
 			</div>
 		</div>
@@ -67,5 +43,8 @@
     });
 	</script>
 	<!--共有模板end-->
+	<script type="text/javascript">
+    seajs.use('mod/private/createPrj.js');
+	</script>	
 </body>
 </html>

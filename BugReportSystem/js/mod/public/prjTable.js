@@ -6,7 +6,7 @@ define(function (require, epxorts, module){
 		var $this=$(this),
 			pid=$(this).find('td').eq(1).text().trim()//单行项目id
 
-		$.cookie('pid',pid)
+		$.cookie('detail_pid',pid)//点击的账目名称保存到cookie中
 
 		window.location.href='prjdetail.html'		
 	})
