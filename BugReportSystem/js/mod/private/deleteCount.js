@@ -7,16 +7,17 @@ define(function (require,exports,module){
 	var ajaxInit=require('../public/ajaxInit.js'),
 		obj=require('../public/cookieObj.js')
 
-	var tpl=require('../../../tpl/countView.tpl'),//展示全部人员信息的模板
+	var tpl=require('../../../tpl/deleteCount.tpl'),//展示全部人员信息的模板
 		render=template.compile(tpl)
 
-	function getUser(infoObj){//传参空字符串（''）表示获取全部数据
 
+	function getUser(){
 
 	}
-	
-	getUser()
 
+	//$.post(ajaxInit.url+'/getUser',)
+
+	$('.js-deleteCount-tpl').html(render())
 
 	$('.js-deleteCount-submit').on('click',function(e){
 		var $id=$('input[name="id"]'),

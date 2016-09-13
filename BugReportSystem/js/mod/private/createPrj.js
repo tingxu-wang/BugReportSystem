@@ -3,8 +3,7 @@
 * 创建项目脚本，包含模板渲染
 */
 define(function (require, epxorts, module){
-	var ajaxInit=require('../public/ajaxInit.js'),
-		obj=require('../public/cookieObj.js')
+	var ajaxInit=require('../public/ajaxInit.js')
 
 	var createPrjTpl=require('../../../tpl/createPrj.tpl'),
 		render=template.compile(createPrjTpl)
@@ -33,7 +32,9 @@ define(function (require, epxorts, module){
 
 					$.post(ajaxInit.url+'/addProject',dataObj,function(data){
 						if(data==1){
-							$success.removeClass('hidden').find('.text-danger').text('项目添加成功！')
+							$success.removeClass('hidden').find('.text-success').text('项目添加成功！')
+							$pname.val('')
+							$intro.val('')
 						}else{
 							$error.removeClass('hidden').find('.text-danger').text('创建失败，请刷新重试！')
 						}

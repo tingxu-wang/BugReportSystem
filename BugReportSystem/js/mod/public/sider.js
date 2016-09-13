@@ -67,7 +67,7 @@ define(function (require, epxorts, module) {
         var h=$('.main-content').height();
         var winH=$(window).height()-$('#js-cus-navbar').height();
         if(h<winH){
-            $('.main-content').height(winH);
+            $('.main-content').css('min-height',winH)
         } 
     }
     init();

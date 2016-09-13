@@ -9,6 +9,11 @@
 * 修改内容：按照功能划分整理代码
 * 功能概要：筛选条件，自定义响应式表单，老师选择样式（多选菜单），
 * 表格展现样式，日历样式
+*
+* * *
+* edit by wtx 20160913
+* 加入.table_intro
+*
 */
 
 
@@ -326,6 +331,12 @@
     margin-top:-2px;
 }
 
+.table_intro{
+    max-width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
 
 /*
 *edit by wtx 20160805
