@@ -73,7 +73,7 @@ define(function (require,exports,module){
 		innerObj.data=data
 		$('.js-createCount-tpl').html(render(innerObj))
 		eventHandler()		
-	})
+	},'json')
 
 
 })
