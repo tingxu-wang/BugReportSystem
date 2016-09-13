@@ -4,7 +4,7 @@
 	<div class="sidebar-toggler hidden-phone"></div>
 </li>
 <li class="start active">
-	<a href="superManager.html">
+	<a href="prjView.html">
 		<i class="fa fa-sitemap"></i>
 		<span class="title">项目管理</span>
 		<span class="selected"></span>
