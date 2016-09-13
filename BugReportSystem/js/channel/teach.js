@@ -24,8 +24,6 @@ define(function (require, epxorts, module){
 	require('../mod/public/fullselect')
 	//自适应table
 	require('../mod/public/tableadapt')
-	//创建账号
-	require('../mod/public/createCount')
 	//项目总览table
 	require('../mod/public/prjTable')
 
