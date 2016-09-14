@@ -43,9 +43,13 @@ define(function (require,exports,module){
 	}
 
 	function refreshTpl(codeVal){//select触发change事件时刷新模板
-		$.post(ajaxInit.url+'/getUser',{code:codeVal},function(data){
-			tplInsert(data)
-		},'json')			
+		if(codeVal==='0'){
+			init()
+		}else{
+			$.post(ajaxInit.url+'/getUser',{code:codeVal},function(data){
+				tplInsert(data)
+			},'json')			
+		}			
 	}
 
 	function eventInit(){
