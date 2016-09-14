@@ -11,32 +11,60 @@ define(function (require,exports,module){
 		render=template.compile(tpl)
 
 
-	function getUser(){
+	function checkSubmit(){//表单提交检测
+		$('.js-deleteRow').on('click',function(){
+			var $this=$(this),
+				id=$this.data('pid')
 
+			if(confirm('确认删除账号：'+$this.parent().siblings('.js-user-name').text()+'吗？')){
+				$.post(ajaxInit.url+'/removeUser',{id:id},function(data){
+					if(data==='1'){
+						$this.parents('tr').remove()
+						alert('账号删除成功！')
+					}else{
+						alert('账号删除失败，请您刷新重试！')
+					}
+				})				
+			}
+		})
 	}
 
-	//$.post(ajaxInit.url+'/getUser',)
+	function tplInsert(data){//渲染模板
+		var innerObj=Object.assign({},obj)
 
-	$('.js-deleteCount-tpl').html(render())
+		innerObj.data=data
 
-	$('.js-deleteCount-submit').on('click',function(e){
-		var $id=$('input[name="id"]'),
-			$error=$('.js-submit-error'),
-			$success=$('.js-submit-success')
-
-		e.preventDefault()
-
-		$error.addClass('hidden')
-		$success.addClass('hidden')
-		
-		if(!($id.val()==='')){//非空
-			if(confirm('确认要删除吗？')){
-				$.post(ajaxInit.url+'/removeUser',{'id':$id.val()},function(data){
-					console.log(data)
-				})
-			}
-		}else{//空
-			$error.text('请填写账号id!').removeClass('hidden')
+		if($('.js-reflesh-confirm').length){//存在已渲染的模板，将其删除
+			$('.js-reflesh-confirm').remove()
 		}
-	})
+
+		$('.js-deleteCount-tpl').append(render(innerObj))
+		checkSubmit()//事件注册
+	}
+
+	function refreshTpl(codeVal){//select触发change事件时刷新模板
+		$.post(ajaxInit.url+'/getUser',{code:codeVal},function(data){
+			tplInsert(data)
+		},'json')			
+	}
+
+	function eventInit(){
+		$('.js-codeSelect').on('change',function(){
+			var optionVal=$(this).find('option:checked').val()
+			refreshTpl(optionVal)
+		})
+	}
+
+	function init(){//模板初始化，页面刚打开默认返回全部账号
+		$.post(ajaxInit.url+'/getUser',function(data){
+			//http://115.28.243.24:8080/SSH/getUser
+			//var data=[{"id":"1","sex":"male","name":"admin","code":"1","password":"admin","intro":"è¶…ç®¡"},{"id":"8a21a4765714bc42015714c921b70000","sex":"male","name":"pmTest","code":"2","password":"admin"},{"id":"8a21a47657229298015722937a120000","sex":"male","name":"userTest","pid":"a","code":"5","password":"admin"},{"id":"8a21a47657229298015723d049380001","sex":"female","name":"a","code":"5","password":"admin"}]
+			tplInsert(data)
+		},'json')			
+	}
+
+
+	eventInit()
+	init()
+
 })
