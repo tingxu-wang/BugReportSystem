@@ -54,11 +54,17 @@
     </div>
     <div class="control-group hidden js-pm-wrap">
 		<label id="" class="control-label left-site">
-			直属产品经理id
+			直属产品经理名称
 			<span class="require-warn">*</span>
 		</label>
         <div class="controls left-site">
-        	<input type="text" class="large m-wrap" name="uid">
+        	<!-- <input type="text" class="large m-wrap" name="uid"> -->
+        	<select name="uid" class="large m-wrap">
+	        	<option value="0">请选择</option>
+				{{ each data }}
+				<option value="{{ $value.uid }}">{{ $value.pmname }}</option>
+				{{ /each }}
+			</select>
         </div>
 	</div>
 	<div class="control-group hidden js-project-wrap">

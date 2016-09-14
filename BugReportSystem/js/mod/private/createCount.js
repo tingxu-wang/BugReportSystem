@@ -29,7 +29,7 @@ define(function (require,exports,module){
 		$('.js-createCount-submit').on('click',function(e){
 			var $pmWrap=$('.js-pm-wrap'),
 				$prjWrap=$('.js-project-wrap'),
-				$pm=$('input[name="uid"]'),
+				$pmOption=$('select[name="uid"] option:selected'),
 				$prjOption=$('select[name="pid"] option:checked'),
 				$sex=$('input[name="sex"]:checked')
 
@@ -44,13 +44,13 @@ define(function (require,exports,module){
 
 			e.preventDefault()
 
-			if( (!$pmWrap.hasClass('hidden') && $pm.val()==0) || (!$prjWrap.hasClass('hidden') && $prjOption.val()==='0') || obj.name==0 || $sex.val()===undefined || obj.code==='0'){
+			if( (!$pmWrap.hasClass('hidden') && $pmOption.val()==='0') || (!$prjWrap.hasClass('hidden') && $prjOption.val()==='0') || obj.name==0 || $sex.val()===undefined || obj.code==='0'){
 				$('.js-submit-error').text('请填写全所有必填项').removeClass('hidden')
 				return
 			}
 
 			if(!$pmWrap.hasClass('hidden')){
-				obj['uid']=$pm.val()//将Pm的id值信息加入提交对象
+				obj['uid']=$pmOption.val()//将Pm的id值信息加入提交对象
 			}else if(!$prjWrap.hasClass('hidden')){
 				obj['pid']=$prj.val()
 			}

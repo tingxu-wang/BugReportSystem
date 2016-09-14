@@ -4,5 +4,10 @@ define(function (require,exports,module){
 
 	var obj=require('../public/cookieObj')
 
-	$('.js-prjDetailTemplate').html(render(obj))
+	var objCopy=require('../public/objCopy')
+
+	function init(){
+		$('.js-prjDetailTemplate').html(render(obj))		
+	}
+	init()
 })
