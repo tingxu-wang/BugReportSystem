@@ -12,7 +12,6 @@ define(function (require,exports,module){
 
 	var loadingStr=require('../public/loading')
 
-
 	function checkSubmit(){//表单提交检测
 		
 	}
@@ -34,8 +33,9 @@ define(function (require,exports,module){
 		if(codeVal==='0'){
 			init()
 		}else{
-			$('.js-memberView-tpl').append()
+			$('.js-memberView-tpl').append(loadingStr)
 			$.post(ajaxInit.url+'/getUser',{code:codeVal},function(data){
+				$('.js-loadingWrap').remove()
 				tplInsert(data)
 			},'json')			
 		}			

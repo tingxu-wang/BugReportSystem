@@ -45,7 +45,7 @@
 	<div class="sidebar-toggler hidden-phone"></div>
 </li>
 <li class="start">
-	<a href="manager.html">
+	<a href="memberView.html">
 		<i class="fa fa-users"></i>
 		<span class="title">我的团队</span>
 	</a>
