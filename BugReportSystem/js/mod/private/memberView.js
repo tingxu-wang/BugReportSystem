@@ -12,13 +12,15 @@ define(function (require,exports,module){
 
 	var loadingStr=require('../public/loading')
 
+	var objCopy=require('../public/objCopy')
+
 	function checkSubmit(){//表单提交检测
 		
 	}
 
 	function tplInsert(data){//渲染模板
-		var innerObj=Object.assign({},obj)
-
+		var innerObj=objCopy(obj)
+						
 		innerObj.data=data
 
 		if($('.js-reflesh-confirm').length){//存在已渲染的模板，将其删除

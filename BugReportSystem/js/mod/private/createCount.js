@@ -10,6 +10,8 @@ define(function (require,exports,module){
 	var tpl=require('../../../tpl/createCount.tpl'),//展示全部人员信息的模板
 		render=template.compile(tpl)
 
+	var objCopy=require('../public/objCopy')
+
 	function eventHandler(){
 		$('select[name="code"]').on('change',function(){
 			var $option=$(this).find('option:selected'),
@@ -68,8 +70,8 @@ define(function (require,exports,module){
 	$.post(ajaxInit.url+'/getProject',function(data){
 		//http://115.28.243.24:8080/SSH/getProject
 		//var data=[{"id":"8a21a4765714bc4201571748817f0003","uid":"8a21a4765714bc42015714c921b70000","p_name":"projectName","time":"2016-09-11 00:00:00.0","pmname":"pmTest","intro":"projectIntrol"},{"id":"8a21a4765714bc420157174a98310004","uid":"8a21a4765714bc42015714c921b70000","p_name":"Ã¦Âµ\u008bÃ¨Â¯\u0095Ã©Â¡Â¹Ã§\u009bÂ®","time":"2016-09-11 00:00:00.0","pmname":"pmTest","intro":"Ã¦Âµ\u008bÃ¨Â¯\u0095Ã§Â»\u0093Ã¦\u009d\u009f"}]
-		var innerObj=Object.assign({},obj)
-
+		var innerObj=objCopy(obj)
+		
 		innerObj.data=data
 		$('.js-createCount-tpl').html(render(innerObj))
 		eventHandler()		

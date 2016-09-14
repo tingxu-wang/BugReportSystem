@@ -9,8 +9,6 @@ define(function (require,exports,module){
 		render=template.compile(settingTpl),
 		obj=require('../public/cookieObj')
 
-	console.log(obj)
-	
 	$('.js-setting-template').html(render(obj))
 
 
