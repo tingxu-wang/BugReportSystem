@@ -3,8 +3,8 @@
 	    <table class="table table-striped table-bordered table-hover">
 	        <thead>
 		      	<tr>
-		        	<th>Id</th>
 		        	<th>用户名</th>
+		        	<th>Id</th>
 		        	<th>账号类别</th>
 		        	<th>性别</th>
 		        </tr>
@@ -12,11 +12,11 @@
 	        <tbody>
 	        	{{ each data }}
 		      	<tr>
-		      		<td>{{ $value.id }}</td>
 		      		<td>{{ $value.name }}</td>
+		      		<td>{{ $value.id }}</td>
 
 		      		{{ if $value.code==1 }}
-		      		<td>超级管理员</td>
+		      		<td>管理员</td>
 		      		{{ /if }}
 		      		{{ if $value.code==2 }}
 		      		<td>产品经理</td>

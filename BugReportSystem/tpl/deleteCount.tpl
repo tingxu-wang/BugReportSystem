@@ -18,7 +18,7 @@
 		      		<td class="js-user-name">{{ $value.name }}</td>
 
 		      		{{ if $value.code==1 }}
-		      		<td>超级管理员</td>
+		      		<td>管理员</td>
 		      		{{ /if }}
 		      		{{ if $value.code==2 }}
 		      		<td>产品经理</td>
