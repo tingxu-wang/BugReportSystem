@@ -9,6 +9,8 @@ define(function (require, epxorts, module){
 	//加载template
 	window.template=require('../plugin/template.3.0')
 
+	window.history.forward(1)
+
 	require('jquery')
 	//jquery.cookie
 	require('cookie')
