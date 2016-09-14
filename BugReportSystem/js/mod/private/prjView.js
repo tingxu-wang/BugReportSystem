@@ -10,8 +10,8 @@ define(function (require,exports,module){
 
 	var loadingStr=require('../public/loading')
 
-	var obj=require('../public/cookieObj.js')
-	console.log(obj)
+	var obj2=require('../public/cookieObj.js')
+	console.log(obj2)
 
 	function getPrj(infoObj){
 		if(arguments.length){
