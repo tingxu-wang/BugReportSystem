@@ -9,7 +9,8 @@
 	      <thead>
 	      	<tr>
 	        	<th>项目名称</th>
-	        	<th>产品经理ID</th>
+	        	<th>项目id</th>
+	        	<th>产品经理id</th>
 	        	<th>产品经理用户名</th>
 	        	<th>添加日期</th>
 	        	<th>项目简介</th>
@@ -19,6 +20,7 @@
 	      	{{each data }}
 	      	<tr>
 	      		<td>{{ $value.p_name }}</td>
+	      		<td>{{ $value.id }}</td>
 	      		<td>{{ $value.uid }}</td>
 	      		<td>{{ $value.pmname }}</td>
 	      		<td>{{ $value.time }}</td>
