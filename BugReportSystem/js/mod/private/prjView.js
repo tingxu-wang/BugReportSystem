@@ -3,13 +3,15 @@
 */
 
 define(function (require,exports,module){
-	var ajaxInit=require('../public/ajaxInit.js'),
-		obj=require('../public/cookieObj.js')
+	var ajaxInit=require('../public/ajaxInit.js')
 
 	var settingTpl=require('../../../tpl/prjView.tpl'),
 		render=template.compile(settingTpl)
 
 	var loadingStr=require('../public/loading')
+
+	var obj=require('../public/cookieObj.js')
+	console.log(obj)
 
 	function getPrj(infoObj){
 		if(arguments.length){
@@ -18,9 +20,8 @@ define(function (require,exports,module){
 				$('.js-loadingWrap').remove()
 				//http://115.28.243.24:8080/SSH/getProject?uid=8a21a4765714bc42015714c921b70000
 				//var data=[{"id":"8a21a4765714bc42015714cccc6a0001","uid":"8a21a4765714bc42015714c921b70000","p_name":"projectName","time":"2016-09-10 00:00:00.0","pmname":"pmTest","intro":"projectIntrol"}]
-				/*var innerObj=Object.assign({},obj)
+				var obj=require('../public/cookieObj.js')
 
-				innerObj.data=data*/
 				obj.data=data
 				$('.js-prjView-template').html(render(obj))
 			},'json')
@@ -30,11 +31,12 @@ define(function (require,exports,module){
 				$('.js-loadingWrap').remove()
 				//http://115.28.243.24:8080/SSH/getProject
 				//var data=[{"id":"1","uid":"8a8bb31356f091120156f096a0e50000","p_name":"BUGé¡¹ç›®","time":"2016-09-10 00:00:00.0","pmname":"ä¸åˆ˜å…¨","intro":"æµ‹è¯•"},{"id":"8a21a4765714bc42015714cccc6a0001","uid":"8a21a4765714bc42015714c921b70000","p_name":"projectName","time":"2016-09-10 00:00:00.0","pmname":"pmTest","intro":"projectIntrol"}]
-				/*var innerObj=Object.assign({},obj)
-
-				innerObj.data=data*/
+				var obj=require('../public/cookieObj.js')
+				
 				obj.data=data
 				$('.js-prjView-template').html(render(obj))
+				console.log(obj)
+
 			},'json')
 		}
 	}
