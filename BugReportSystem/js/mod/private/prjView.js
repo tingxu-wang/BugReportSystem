@@ -18,10 +18,11 @@ define(function (require,exports,module){
 				$('.js-loadingWrap').remove()
 				//http://115.28.243.24:8080/SSH/getProject?uid=8a21a4765714bc42015714c921b70000
 				//var data=[{"id":"8a21a4765714bc42015714cccc6a0001","uid":"8a21a4765714bc42015714c921b70000","p_name":"projectName","time":"2016-09-10 00:00:00.0","pmname":"pmTest","intro":"projectIntrol"}]
-				var innerObj=Object.assign({},obj)
+				/*var innerObj=Object.assign({},obj)
 
-				innerObj.data=data
-				$('.js-prjView-template').html(render(innerObj))
+				innerObj.data=data*/
+				obj.data=data
+				$('.js-prjView-template').html(render(obj))
 			},'json')
 		}else{
 			$('.js-prjView-template').append(loadingStr)
