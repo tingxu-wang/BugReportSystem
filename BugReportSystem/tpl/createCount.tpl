@@ -76,8 +76,8 @@
         	<!-- <input type="text" class="large m-wrap" name="pid"> -->
         	<select name="pid" class="large m-wrap">
 	        	<option value="0">请选择</option>
-				{{ each data }}
-				<option value="{{ $value.id }}">{{ $value.p_name }}</option>
+				{{ each data2 }}
+				<option value="{{ $value.id }}">{{ $value.name }}</option>
 				{{ /each }}
 			</select>
         </div>

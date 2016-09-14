@@ -73,8 +73,11 @@ define(function (require,exports,module){
 		var innerObj=objCopy(obj)
 		
 		innerObj.data=data
-		$('.js-createCount-tpl').html(render(innerObj))
-		eventHandler()		
+		$.post(ajaxInit.url+'/getUser',{code:'2'},function(data2){
+			innerObj.data2=data2
+			$('.js-createCount-tpl').html(render(innerObj))
+			eventHandler()
+		})			
 	},'json')
 
 
