@@ -18,7 +18,7 @@
       	<span class="caret"></span></a>
       <ul class="dropdown-menu">
          <li><a href="setting.html"><span class="fa fa-gear" aria-hidden="true"></span> 账号设置</a></li>
-        <li><a href="javascript:void 0;" onclick="location.reload('login.html')"><span class="fa fa-power-off" aria-hidden="true"></span> 注销</a></li>
+        <li><a href="javascript:void (0);" onclick="location.replace('login.html')"><span class="fa fa-power-off" aria-hidden="true"></span> 注销</a></li>
       </ul>
     </li>
   </ul>
