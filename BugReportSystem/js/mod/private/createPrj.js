@@ -33,7 +33,7 @@ define(function (require, epxorts, module){
 						uid:$.cookie('id')
 					}
 
-					//$('.js-ok-btn').on('click',function(){
+					$('.js-ok-btn').on('click',function(){
 						//confirmAlert.fadeout()
 						$.post(ajaxInit.url+'/addProject',dataObj,function(data){
 							if(data==='1'){
@@ -44,7 +44,7 @@ define(function (require, epxorts, module){
 								$error.removeClass('hidden').find('.text-danger').text('创建失败，请刷新重试！')
 							}
 						},'json')						
-					//})
+					})
 				//}
 			}
 		})
