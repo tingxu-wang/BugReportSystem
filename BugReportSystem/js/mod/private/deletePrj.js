@@ -33,7 +33,7 @@ define(function (require, epxorts, module){
 				pid=$this.data('pid')
 
 			//if(confirm('确定要删除项目：'+pname+'吗？')){
-				confirmAlert.showAlert('确定要删除项目：'+pname+'吗？'))
+				confirmAlert.showAlert('确定要删除项目：'+pname+'吗？')
 				$('.js-ok-btn').on('click',function(){
 					confirmAlert.fadeout()
 					$.post(ajaxInit.url+'/removeProject',{id:pid},function(data){
