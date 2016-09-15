@@ -13,6 +13,8 @@ define(function (require, epxorts, module){
 
 	var objCopy=require('../public/objCopy')
 
+	var confirmAlert=require('../public/confirmAlert')
+
 	var infoObj={
 		uid:$.cookie('id')
 	}
@@ -30,23 +32,27 @@ define(function (require, epxorts, module){
 				pname=$this.parent().siblings('.js-pname').text(),
 				pid=$this.data('pid')
 
-			if(confirm('确定要删除项目：'+pname+'吗？')){
-				$.post(ajaxInit.url+'/removeProject',{id:pid},function(data){
-					if(data==='1'){
-						/*$.post(ajaxInit.url+'/getProject',infoObj,function(data){//删除项目后
-							if(typeof data!=='string'){
-								var innerObj=Object.assign({},obj)
-								innerObj.data=data
-								$('.js-deletePrj-tpl').html(render(innerObj))										
-							}
-						},'json')*/											
-						$this.parents('tr').remove()
-						alert('删除成功')
-					}else{
-						alert('失败，请检查您的网络！')
-					}
+			//if(confirm('确定要删除项目：'+pname+'吗？')){
+				confirmAlert.showAlert('确定要删除项目：'+pname+'吗？'))
+				$('.js-ok-btn').on('click',function(){
+					confirmAlert.fadeout()
+					$.post(ajaxInit.url+'/removeProject',{id:pid},function(data){
+						if(data==='1'){
+							/*$.post(ajaxInit.url+'/getProject',infoObj,function(data){//删除项目后
+								if(typeof data!=='string'){
+									var innerObj=Object.assign({},obj)
+									innerObj.data=data
+									$('.js-deletePrj-tpl').html(render(innerObj))										
+								}
+							},'json')*/											
+							$this.parents('tr').remove()
+							alert('删除成功')
+						}else{
+							alert('失败，请检查您的网络！')
+						}
+					})					
 				})
-			}
+			//}
 		})
 	}
 

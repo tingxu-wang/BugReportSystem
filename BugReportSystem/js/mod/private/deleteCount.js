@@ -14,21 +14,29 @@ define(function (require,exports,module){
 
 	var objCopy=require('../public/objCopy')
 
+	var confirmAlert=require('../public/confirmAlert')
+
 	function checkSubmit(){//表单提交检测
 		$('.js-deleteRow').on('click',function(){
 			var $this=$(this),
 				id=$this.data('pid')
 
-			if(confirm('确认删除账号：'+$this.parent().siblings('.js-user-name').text()+'吗？')){
-				$.post(ajaxInit.url+'/removeUser',{id:id},function(data){
-					if(data==='1'){
-						$this.parents('tr').remove()
-						alert('账号删除成功！')
-					}else{
-						alert('账号删除失败，请您刷新重试！')
-					}
-				})				
-			}
+			//if(confirm('确认删除账号：'+$this.parent().siblings('.js-user-name').text()+'吗？')){
+				confirmAlert.showAlert('确认提交项目:'+$pname.val()+'吗?')
+				
+				$('.js-ok-btn').on('click',function(){
+					confirmAlert.fadeout()
+					$.post(ajaxInit.url+'/removeUser',{id:id},function(data){
+						if(data==='1'){
+							$this.parents('tr').remove()
+							alert('账号删除成功！')
+						}else{
+							alert('账号删除失败，请您刷新重试！')
+						}
+					})						
+				})
+			
+			//}
 		})
 	}
 

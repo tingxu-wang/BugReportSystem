@@ -8,6 +8,8 @@ define(function (require, epxorts, module){
 	var createPrjTpl=require('../../../tpl/createPrj.tpl'),
 		render=template.compile(createPrjTpl)
 
+	var confirmAlert=require('../public/confirmAlert')
+
 	function eventHandler(){
 		$('.js-createPrj-submit').on('click',function(e){
 			var $pname=$('input[name="pname"]'),
@@ -23,23 +25,27 @@ define(function (require, epxorts, module){
 			if($pname.val()==='' || $intro.val()===''){
 				$error.removeClass('hidden').find('.text-danger').text('请填写完所有必选项')
 			}else{//填写全
-				if(confirm('确认提交项目:'+$pname.val()+'吗?')){
+				//if(confirm('确认提交项目:'+$pname.val()+'吗?')){
+					confirmAlert.showAlert('确认提交项目:'+$pname.val()+'吗?')
 					var dataObj={
 						pname:$pname.val(),
 						intro:$intro.val(),
 						uid:$.cookie('id')
 					}
 
-					$.post(ajaxInit.url+'/addProject',dataObj,function(data){
-						if(data==1){
-							$success.removeClass('hidden').find('.text-success').text('项目添加成功！')
-							$pname.val('')
-							$intro.val('')
-						}else{
-							$error.removeClass('hidden').find('.text-danger').text('创建失败，请刷新重试！')
-						}
-					},'json')
-				}
+					$('.js-ok-btn').on('click',function(){
+						confirmAlert.fadeout()
+						$.post(ajaxInit.url+'/addProject',dataObj,function(data){
+							if(data==1){
+								$success.removeClass('hidden').find('.text-success').text('项目添加成功！')
+								$pname.val('')
+								$intro.val('')
+							}else{
+								$error.removeClass('hidden').find('.text-danger').text('创建失败，请刷新重试！')
+							}
+						},'json')						
+					})
+				//}
 			}
 		})
 	}
