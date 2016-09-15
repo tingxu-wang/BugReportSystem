@@ -8,7 +8,10 @@
 			用户名
 		</label>
 		<div class="controls left-site">
-			<input type="text" class="large m-wrap" name="name" disabled="" value="{{ name }}">
+			<div class="form-control-static">
+		      	{{ name }}
+		    </div>
+			<!-- <input type="text" class="large m-wrap" name="name" disabled="" value="{{ name }}"> -->
 		</div>
 	</div>
 	<div class="control-group">
@@ -32,7 +35,10 @@
 			账号id
 		</label>
 		<div class="controls left-site">
-			<input type="text" class="large m-wrap" name="id" disabled="" value="{{ id }}">
+			<div class="form-control-static">
+		      	{{ id  }}
+		    </div>
+			<!-- <input type="text" class="large m-wrap" name="id" disabled="" value="{{ id }}"> -->
 		</div>
 	</div>
 	{{ if code==3 || code==4 }}
@@ -41,7 +47,10 @@
 			负责产品经理ID
 		</label>
 		<div class="controls left-site">
-			<input type="text" class="large m-wrap" name="uid" disabled="" value="{{ uid }}">
+			<div class="form-control-static">
+		      	{{ uid }}
+		    </div>
+			<!-- <input type="text" class="large m-wrap" name="uid" disabled="" value="{{ uid }}"> -->
 		</div>
 	</div>
 	{{ /if }}
