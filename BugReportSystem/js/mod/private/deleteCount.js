@@ -24,17 +24,17 @@ define(function (require,exports,module){
 			//if(confirm('确认删除账号：'+$this.parent().siblings('.js-user-name').text()+'吗？')){
 				confirmAlert.showAlert('确认删除账号：'+$this.parent().siblings('.js-user-name').text()+'吗？')
 				
-				$('body').on('click','.js-ok-btn',function(){
+				$('.js-ok-btn').on('click',function(){
 					confirmAlert.fadeout()
 					$.post(ajaxInit.url+'/removeUser',{id:id},function(data){
-						if(data===1){
+						if(data==='1'){
 							$this.parents('tr').remove()
 							alert('账号删除成功！')
 						}else{
 							alert('账号删除失败，请您刷新重试！')
 						}
 					})						
-				},'json')
+				})
 			
 			//}
 		})
