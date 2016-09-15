@@ -52,7 +52,7 @@ define(function (require,exports,module){
 			if(!$pmWrap.hasClass('hidden')){
 				obj['uid']=$pmOption.val()//将Pm的id值信息加入提交对象
 			}else if(!$prjWrap.hasClass('hidden')){
-				obj['pid']=$prj.val()
+				obj['pid']=$prjOption.val()
 			}
 
 			//String name,String pass,String code,String uid,String pid
