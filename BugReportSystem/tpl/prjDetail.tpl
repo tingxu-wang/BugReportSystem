@@ -51,7 +51,7 @@
 									<span class="require-warn">*</span>
 								</label>
 								<div class="controls left-site">
-									<input type="text" class="large m-wrap">
+									<input type="text" class="large m-wrap" name="">
 								</div>
 							</div>
 							<div class="control-group">
@@ -80,7 +80,7 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-		        <button type="button" class="btn btn-primary">提交</button>
+		        <button type="button" class="btn btn-primary js-addBug-submit">提交</button>
 		      </div>
 		    </div>
 		  </div>
@@ -148,8 +148,8 @@
 	        </tr>
 	      </thead>
 	      <tbody>
-	      	<tr>
-	      		<td>左边栏页面样式错误</td>
+<!-- 	      	<tr>
+	      		<td></td>
 	      		<td>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -157,10 +157,10 @@
 	      			<span class="fa fa-star-o"></span>
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
-	      		<td>2016-08-07 08:36</td>
-	      		<td>这里填写详细信息</td>
-	      		<td>2016-08-07 08:36</td>
-	      	</tr>
+	      		<td></td>
+	      		<td></td>
+	      		<td></td>
+	      	</tr> -->
 	      	<tr>
 	      		<td>prj.html用户名获取无法显示</td>
 	      		<td>

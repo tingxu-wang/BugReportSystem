@@ -9,9 +9,25 @@ define(function (require,exports,module){
 
 	var objCopy=require('../public/objCopy')
 
-	function init(){
-		//$.post(ajaxInit.url+'/getBug',)
-		$('.js-prjDetailTemplate').html(render(obj))		
+	function eventHandler(){
+		$('.js-addBug-submit').on('click',function(e){
+
+
+			e.preventDefault()
+		})
 	}
-	init()
+
+	function init(){
+		$.post(ajaxInit.url+'/getBug',{pid:$.cookie('detail_pid'),state:0},function(data1){//未解决
+			var innerObj=objCopy(obj)
+				
+			innerObj.data1=data1
+			$.post(ajaxInit.url+'/getBug',{pid:$.cookie('detail_pid'),state:1},function(){//已解决
+				innerObj.data2=data2
+				$('.js-prjDetailTemplate').html(render(innerObj))	
+			},'json')
+		},'json')
+	}
+	//init()
+	$('.js-prjDetailTemplate').html(render(obj))
 })
