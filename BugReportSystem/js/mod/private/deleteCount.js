@@ -24,7 +24,7 @@ define(function (require,exports,module){
 			//if(confirm('确认删除账号：'+$this.parent().siblings('.js-user-name').text()+'吗？')){
 				confirmAlert.showAlert('确认删除账号：'+$this.parent().siblings('.js-user-name').text()+'吗？')
 				
-				$('.js-ok-btn').on('click',function(){
+				$('body').on('click','.js-ok-btn',function(){
 					confirmAlert.fadeout()
 					$.post(ajaxInit.url+'/removeUser',{id:id},function(data){
 						if(data===1){
