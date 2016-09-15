@@ -27,14 +27,14 @@ define(function (require,exports,module){
 				$('.js-ok-btn').on('click',function(){
 					confirmAlert.fadeout()
 					$.post(ajaxInit.url+'/removeUser',{id:id},function(data){
-						if(data==='1'){
+						if(data===1){
 							$this.parents('tr').remove()
 							alert('账号删除成功！')
 						}else{
 							alert('账号删除失败，请您刷新重试！')
 						}
 					})						
-				})
+				},'json')
 			
 			//}
 		})

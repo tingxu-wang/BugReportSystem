@@ -34,9 +34,9 @@ define(function (require, epxorts, module){
 					}
 
 					$('.js-ok-btn').on('click',function(){
-						//confirmAlert.fadeout()
+						confirmAlert.fadeout()
 						$.post(ajaxInit.url+'/addProject',dataObj,function(data){
-							if(data==='1'){
+							if(data===1){
 								$success.removeClass('hidden').find('.text-success').text('项目添加成功！')
 								$pname.val('')
 								$intro.val('')
