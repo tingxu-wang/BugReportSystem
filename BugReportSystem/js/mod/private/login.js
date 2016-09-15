@@ -39,7 +39,7 @@ define(function (require,exports,module){
 				if(data.code==1 || data.code==2 || data.code==3 || data.code==4){//超管 PM 程序员 测试
 					window.location.href='prjView.html'
 				}else{//用户
-					window.location.href='prjDetail.html'
+					window.location.href='prjdetail.html'
 				}
 			}
 		},'json')		
