@@ -47,11 +47,18 @@ define(function (require,exports,module){
 	}
 
 	function tplRender(){
-		$('.js-memberView-tpl').append(loadingStr)
+		$('.js-prjDetailTemplate').append(loadingStr)
+
+		var innerObj=objCopy(obj)
+
+		if(obj.code==='2'){
+			$.post(ajaxInit.url+'/getUser',function(data3){
+				innerObj.data3=data3
+			})
+		}
 		$.post(ajaxInit.url+'/getProjectInformation',{id:$.cookie('detail_pid')},function(data){//项目信息
 			//[{"id":"8a21a476572e96fb015730db32e3000b","uid":"8a21a476572e96fb015730c2c5490002","p_name":"鎵嬫満QQ","time":"2016-09-16 00:00:00.0","pmname":"鐜嬪涵鏃 ","intro":"Mobile QQ"}]
-			var innerObj=objCopy(obj)
-
+			
 			innerObj.data=data[0]
 			$.post(ajaxInit.url+'/getBug',{pid:$.cookie('detail_pid'),state:0},function(data1){//未解决
 				//[{"id":"8a21a47657319a5d0157319acddc0000","uid":"8a21a476572e96fb01573100c8250024","level":"2","uname":"pmTest","state":"0","pid":"8a21a47657318e500157318ef2650000","puttime":"2016-09-16 00:00:00.0","intro":"prj1 intro"}]					
