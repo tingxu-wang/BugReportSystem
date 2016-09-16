@@ -53,7 +53,7 @@ define(function (require,exports,module){
 
 		if(obj.code==='2'){
 			$.post(ajaxInit.url+'/getUser',function(data3){
-				innerObj.data3=data3[0]
+				innerObj.data3=data3
 			},'json')
 		}
 		$.post(ajaxInit.url+'/getProjectInformation',{id:$.cookie('detail_pid')},function(data){//项目信息
