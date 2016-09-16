@@ -50,7 +50,7 @@ define(function (require,exports,module){
 			var innerObj=objCopy(obj)
 				
 			innerObj.data1=data1
-			$.post(ajaxInit.url+'/getBug',{pid:$.cookie('detail_pid'),state:1},function(){//已解决
+			$.post(ajaxInit.url+'/getBug',{pid:$.cookie('detail_pid'),state:1},function(data2){//已解决
 				$('.js-loadingWrap').remove()
 				innerObj.data2=data2
 				$('.js-prjDetailTemplate').html(render(innerObj))	
