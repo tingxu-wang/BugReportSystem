@@ -64,7 +64,7 @@ define(function (require,exports,module){
 					eventHandler()//事件注册
 				},'json')
 			},'json')			
-		})
+		},'json')
 
 	}
 
