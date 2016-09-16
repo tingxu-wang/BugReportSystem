@@ -5,13 +5,25 @@
 
 define(function (require,exports,module){
 
-	$('.js-test').on('click',function(){
-		var confirmAlert=require('../mod/public/confirmAlert')
+	function triggerSelect($selector){
+		if($selector.prop('checked')===false){
+			$selector.prop('checked',true)
+		}else{
+			$selector.prop('checked',false)
+		}
+	}
 
-		confirmAlert.showAlert('内容')
+	$('.js-addPersonRow').on('click',function(){
+		var $this=$(this),
+			$input=$this.find('input')
 
-		$('.js-ok-btn').on('click',function(){
-			confirmAlert.fadeout()
-		})
+		triggerSelect($input)
 	})
-})
+
+	$('.js-selectAll-th').on('click',function(){
+		var $this=$(this),
+			$all=$this.parents('table').find('input')
+
+		triggerSelect($all)		
+	})
+})	

@@ -120,7 +120,7 @@
 	    <table class="table table-striped table-bordered table-hover">
 	      <thead>
 	      	<tr>
-	      		<th>选择</th>
+	      		<th class="js-selectAll-th"><input type="checkbox"> 选择</th>
 	        	<th>用户名</th>
 	        	<th>Id</th>
 	        	<th>账号类别</th>
@@ -130,7 +130,7 @@
 	      <tbody>
 	      	{{ each data3 }}
 	      	<!-- [{"id":"8a21a4765731dfc1015731e19fc40000","uid":"8a21a476572e96fb01573100c8250024","sex":"male","name":"tingxu.wang","code":"3","password":"admin"},{"id":"8a21a4765731dfc1015731e208320001","uid":"8a21a476572e96fb01573100c8250024","sex":"male","name":"tester","code":"4","password":"admin"}] -->
-	      	<tr>
+	      	<tr class="js-addPersonRow">
 	      		<td class="js-addPerson"><input type="checkbox" value="{{ $value.id }}"></td>
 	      		<td>{{ $value.name }}</td>
 	      		<td>{{ $value.id }}</td>

@@ -10,7 +10,7 @@ define(function (require,exports,module){
 	var objCopy=require('../public/objCopy')
 
 	function eventHandler(){
-		$('.js-addBug-submit').on('click',function(e){
+		$('.js-addBug-submit').on('click',function(e){//提交按钮
 			var $title=$('input[name="title"]'),
 				$level=$('input[name="level"]'),
 				$intro=$('textarea[name="intro"]'),
@@ -44,6 +44,29 @@ define(function (require,exports,module){
 				},'json')			
 			}	
 		})
+
+
+		function triggerSelect($selector){
+			if($selector.prop('checked')===false){
+				$selector.prop('checked',true)
+			}else{
+				$selector.prop('checked',false)
+			}
+		}
+
+		$('.js-addPersonRow').on('click',function(){
+			var $this=$(this),
+				$input=$this.find('input')
+
+			triggerSelect($input)
+		})
+
+		$('.js-selectAll-th').on('click',function(){
+			var $this=$(this),
+				$all=$this.parents('table').find('input')
+
+			triggerSelect($all)		
+		})
 	}
 
 	function tplRender(){
@@ -51,7 +74,7 @@ define(function (require,exports,module){
 
 		var innerObj=objCopy(obj)
 
-		if(obj.code==='2'){
+		if(obj.code==='2'){//pm 获取手下人员信息
 			$.post(ajaxInit.url+'/getUser',function(data3){
 				innerObj.data3=data3
 			},'json')
