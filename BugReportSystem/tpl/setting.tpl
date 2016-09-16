@@ -59,6 +59,11 @@
 			<span class="text-danger"></span>
 		</div>
 	</div>
+	<div class="control-group js-setting-submit-success hidden">
+		<div class="controls left-site">
+			<span class="text-success"></span>
+		</div>
+	</div>
 	<div class="control-group">
 		<div class="controls left-site">
 			<button class="btn btn-primary js-setting-submit">修改</button>

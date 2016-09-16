@@ -9,7 +9,7 @@
 		</label>
 		<div class="controls left-site">
       <div class="form-control-static">
-      	这里填写项目名称
+      	{{ data.p_name }}
       </div>
     </div>
 	</div>
@@ -19,7 +19,27 @@
 		</label>
 		<div class="controls left-site">
 	        <div class="form-control-static">
-	      	    这里填写项目ID
+	      	    {{ data.id }}
+	        </div>
+	    </div>
+	</div>
+	<div class="control-group">
+		<label id="" class="control-label left-site">
+			添加时间
+		</label>
+		<div class="controls left-site">
+	        <div class="form-control-static">
+	      	    {{ data.time }}
+	        </div>
+	    </div>
+	</div>
+	<div class="control-group">
+		<label id="" class="control-label left-site">
+			负责人
+		</label>
+		<div class="controls left-site">
+	        <div class="form-control-static">
+	      	    {{ data.pmname }}
 	        </div>
 	    </div>
 	</div>
@@ -29,12 +49,11 @@
 		</label>
 		<div class="controls left-site">
 	        <div class="form-control-static">
-	      	    这里填写项目简介
+	      	    {{ data.intro }}
 	        </div>
 	    </div>
 	</div>
-	<!-- code==4||code==5 -->
-	{{ if true }}
+	{{ if code==4||code==5 }}
 	<div class="control-group">
 		<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#bugModal">添加新的bug</button>
 		<div class="modal fade js-modal" id="bugModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -103,6 +122,7 @@
 	        	<th>标题</th>
 	        	<th>需求等级</th>
 	        	<th>添加日期</th>
+	        	<th>提交人</th>
 	        	<th>bug内容摘要</th>
 	        </tr>
 	      </thead>
@@ -153,7 +173,11 @@
 	      		</td>
 	      		{{ /if }}
 	      		<td>{{ $value.puttime }}</td>
+	      		<td>{{ $value.uname }}</td>
 	      		<td class="table_intro">{{ $value.intro }}</td>
+	      		{{ if code==3 }}
+	      		<td><span class="deleteRow js-deleteRow" data-pid="{{ $value.id }}"><span class="fa fa-close text-success"></span> 标记为已解决</span></td>
+	      		{{ /if }}
 	      	</tr>
 	      	{{ /each }}
 	      	<!-- <tr>
@@ -184,6 +208,8 @@
 	        	<th>标题</th>
 	        	<th>需求等级</th>
 	        	<th>添加日期</th>
+	        	<th>提交人</th>
+	        	<th>解决人</th>
 	        	<th>bug内容摘要</th>
 	        	<th>完成时间</th>
 	        </tr>
@@ -234,6 +260,8 @@
 	      		</td>
 	      		{{ /if }}
 	      		<td>{{ $value.puttime }}</td>
+	      		<td>{{ $value.uname }}</td>
+	      		<td>{{ $value.sname }}</td>
 	      		<td class="table_intro">{{ $value.intro }}</td>
 	      		<td>{{ $value.slovetime }}</td>
 	      	</tr>
