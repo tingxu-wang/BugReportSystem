@@ -9,8 +9,11 @@ define(function (require,exports,module){
 
 	var objCopy=require('../public/objCopy')
 
+	var confirmAlert=require('../public/confirmAlert')
+
 	function eventHandler(){
-		$('.js-addBug-submit').on('click',function(e){//提交按钮
+		//提交按钮
+		$('.js-addBug-submit').on('click',function(e){
 			var $title=$('input[name="title"]'),
 				$level=$('input[name="level"]'),
 				$intro=$('textarea[name="intro"]'),
@@ -91,7 +94,20 @@ define(function (require,exports,module){
 			}else{
 				$('.js-memberSubmit-error').removeClass('hidden').text('请选择人员！')
 			}
+		})
 
+		//标记bug状态
+		$('.js-submitBug').on('click',function(){
+			$bugTitle=$(this).parents('tr').find('.js-bugTitle')
+			confirmAlert.showAlert('确定要标记bug '+$bugTitle.text()+'为已解决状态吗？')
+			$('.js-ok-btn').on('click',function(){
+				confirmAlert.fadeout()
+				$.post(ajaxInit.url+'/submitBug',{bid:$bugTitle.data('bid')},function(data){
+					if(data===1){
+						tplRender()
+					}
+				},'json')					
+			})
 		})
 	}
 
