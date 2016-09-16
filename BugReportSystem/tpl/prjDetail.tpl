@@ -53,7 +53,7 @@
 	        </div>
 	    </div>
 	</div>
-	{{ if code==4||code==5 }}
+	{{ if (code==4||code==5) }}
 	<div class="control-group">
 		<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#bugModal">添加新的bug</button>
 		<div class="modal fade js-modal" id="bugModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
