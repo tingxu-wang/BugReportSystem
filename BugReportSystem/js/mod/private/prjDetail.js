@@ -53,8 +53,8 @@ define(function (require,exports,module){
 
 		if(obj.code==='2'){
 			$.post(ajaxInit.url+'/getUser',function(data3){
-				innerObj.data3=data3
-			})
+				innerObj.data3=data3[0]
+			},'json')
 		}
 		$.post(ajaxInit.url+'/getProjectInformation',{id:$.cookie('detail_pid')},function(data){//项目信息
 			//[{"id":"8a21a476572e96fb015730db32e3000b","uid":"8a21a476572e96fb015730c2c5490002","p_name":"鎵嬫満QQ","time":"2016-09-16 00:00:00.0","pmname":"鐜嬪涵鏃 ","intro":"Mobile QQ"}]
