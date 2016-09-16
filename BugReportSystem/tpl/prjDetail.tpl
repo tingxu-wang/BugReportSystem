@@ -158,7 +158,7 @@
 </div>
 <div class="control-group">
 	<div class="controls left-site">
-		<span class="text-error js-memberSubmit-error hidden"></span>
+		<span class="text-danger js-memberSubmit-error hidden"></span>
 	</div>						
 </div>
 <div class="control-group">
@@ -182,6 +182,9 @@
 	        	<th>添加日期</th>
 	        	<th>提交人</th>
 	        	<th>bug内容摘要</th>
+	        	{{ if code==3 }}
+	        	<th>操作</th>
+	        	{{ /if }}
 	        </tr>
 	      </thead>
 	      <tbody>
@@ -234,7 +237,7 @@
 	      		<td>{{ $value.uname }}</td>
 	      		<td class="table_intro">{{ $value.intro }}</td>
 	      		{{ if code==3 }}
-	      		<td><span class="deleteRow js-deleteRow" data-pid="{{ $value.id }}"><span class="fa fa-close text-success"></span> 标记为已解决</span></td>
+	      		<td><span class="deleteRow js-deleteRow" data-pid="{{ $value.id }}"><span class="fa fa-check text-success"></span> 标记为已解决</span></td>
 	      		{{ /if }}
 	      	</tr>
 	      	{{ /each }}
