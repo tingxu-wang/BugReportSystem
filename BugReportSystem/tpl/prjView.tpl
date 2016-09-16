@@ -17,7 +17,7 @@
 	        </tr>
 	      </thead>
 	      <tbody>
-	      	{{each data }}
+	      	{{ each data }}
 	      	<tr>
 	      		<td>{{ $value.p_name }}</td>
 	      		<td>{{ $value.id }}</td>
@@ -26,7 +26,7 @@
 	      		<td>{{ $value.time }}</td>
 	      		<td>{{ $value.intro }}</td>
 	      	</tr>
-	      	{{/each}}
+	      	{{ /each }}
 <!-- 	      	<tr>
 	      		<td>版本控制平台</td>
 	      		<td>001</td>

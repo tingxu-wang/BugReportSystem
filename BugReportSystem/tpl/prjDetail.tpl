@@ -33,53 +33,57 @@
 	        </div>
 	    </div>
 	</div>
-	{{ if code!=3 }}
+	<!-- code==4||code==5 -->
+	{{ if true }}
 	<div class="control-group">
 		<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#bugModal">添加新的bug</button>
-		<div class="modal fade" id="bugModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal fade js-modal" id="bugModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		        <h4 class="modal-title" id="myModalLabel">添加新的bug</h4>
 		      </div>
-		      <div class="modal-body">
-						<form action="" class="form-horizontal">
-							<div class="control-group">
-								<label class="control-label left-site">
-									标题
-									<span class="require-warn">*</span>
-								</label>
-								<div class="controls left-site">
-									<input type="text" class="large m-wrap" name="">
-								</div>
+		      <div class="modal-body js-collection">
+					<div class="control-group">
+						<label class="control-label left-site">
+							标题
+							<span class="require-warn">*</span>
+						</label>
+						<div class="controls left-site">
+							<input type="text" class="large m-wrap" name="title">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label left-site">
+							需求等级
+							<span class="require-warn">*</span>
+						</label>
+						<div class="controls left-site">
+							<div class="js-requireLevel">
+								<span class="fa fa-star-o"></span>
+								<span class="fa fa-star-o"></span>
+								<span class="fa fa-star-o"></span>
+								<span class="fa fa-star-o"></span>
+								<span class="fa fa-star-o"></span>
 							</div>
-							<div class="control-group">
-								<label class="control-label left-site">
-									需求等级
-									<span class="require-warn">*</span>
-								</label>
-								<div class="controls left-site">
-									<div class="js-requireLevel">
-										<span class="fa fa-star-o"></span>
-										<span class="fa fa-star-o"></span>
-										<span class="fa fa-star-o"></span>
-										<span class="fa fa-star-o"></span>
-										<span class="fa fa-star-o"></span>
-									</div>
-									<input type="number" class="hidden requireLevelInput">
-								</div>
-							</div>
-							<div class="control-group">
-					      <label class="control-label left-site">详细内容</label>
-					      <div class="controls left-site">
-					        <textarea class="tea-wrap large"></textarea>
-					      </div>
-					    </div>
-						</form>
+							<input type="number" class="hidden requireLevelInput" name="level">
+						</div>
+					</div>
+					<div class="control-group">
+				      <label class="control-label left-site">详细内容</label>
+				      <div class="controls left-site">
+				        <textarea class="tea-wrap large" name="intro"></textarea>
+				      </div>
+				    </div>
+				    <div class="control-group">
+						<div class="controls left-site">
+							<span class="errorText js-submit-error hidden"></span>
+						</div>						
+					</div>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		        <button type="button" class="btn btn-default js-cancel-btn" data-dismiss="modal">取消</button>
 		        <button type="button" class="btn btn-primary js-addBug-submit">提交</button>
 		      </div>
 		    </div>
@@ -103,8 +107,27 @@
 	        </tr>
 	      </thead>
 	      <tbody>
+	      	<!-- 成功返回当前用户的项目bug，失败返回0，提出者名称(uname)，解决者名称(sname)，项目id pid,问题介绍intro,等级level,title(bug标题） -->
+	      	{{ each data1 }}
 	      	<tr>
-	      		<td>左边栏页面样式错误</td>
+	      		<td>{{ $value.title }}</td>
+	      		{{ if $value.level==0 }}
+	      		<td>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      		</td>
+	      		{{ else if $value.level==1 }}
+	      		<td>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      		</td>
+	      		{{ else if $value.level==2 }}
 	      		<td>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -112,10 +135,28 @@
 	      			<span class="fa fa-star-o"></span>
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
-	      		<td>2016-08-07 08:36</td>
-	      		<td>这里填写详细信息</td>
+	      		{{ else if $value.level==3 }}
+	      		<td>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star-"></span>
+	      			<span class="fa fa-star-"></span>
+	      			<span class="fa fa-star-o"></span>
+	      		</td>
+	      		{{ else if $value.level==5 }}
+	      		<td>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      		</td>
+	      		{{ /if }}
+	      		<td>{{ $value.puttime }}</td>
+	      		<td class="table_intro">{{ $value.intro }}</td>
 	      	</tr>
-	      	<tr>
+	      	{{ /each }}
+	      	<!-- <tr>
 	      		<td>prj.html用户名获取无法显示</td>
 	      		<td>
 	      			<span class="fa fa-star"></span>
@@ -126,7 +167,7 @@
 	      		</td>
 	      		<td>2016-08-07 21:36</td>
 	      		<td>这里填写详细信息</td>
-	      	</tr>
+	      	</tr> -->
 	      </tbody>
 	    </table>
     </div>
@@ -148,8 +189,26 @@
 	        </tr>
 	      </thead>
 	      <tbody>
-<!-- 	      	<tr>
-	      		<td></td>
+	      	{{ each data2 }}
+	      	<tr>
+	      		<td>{{ $value.title }}</td>
+	      		{{ if $value.level==0 }}
+	      		<td>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      		</td>
+	      		{{ else if $value.level==1 }}
+	      		<td>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      			<span class="fa fa-star-o"></span>
+	      		</td>
+	      		{{ else if $value.level==2 }}
 	      		<td>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -157,11 +216,29 @@
 	      			<span class="fa fa-star-o"></span>
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
-	      		<td></td>
-	      		<td></td>
-	      		<td></td>
-	      	</tr> -->
-	      	<tr>
+	      		{{ else if $value.level==3 }}
+	      		<td>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star-"></span>
+	      			<span class="fa fa-star-"></span>
+	      			<span class="fa fa-star-o"></span>
+	      		</td>
+	      		{{ else if $value.level==5 }}
+	      		<td>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
+	      		</td>
+	      		{{ /if }}
+	      		<td>{{ $value.puttime }}</td>
+	      		<td class="table_intro">{{ $value.intro }}</td>
+	      		<td>{{ $value.slovetime }}</td>
+	      	</tr>
+	      	{{ /each }}
+<!-- 	      	<tr>
 	      		<td>prj.html用户名获取无法显示</td>
 	      		<td>
 	      			<span class="fa fa-star"></span>
@@ -173,7 +250,7 @@
 	      		<td>2016-08-07 21:36</td>
 	      		<td>这里填写详细信息</td>
 	      		<td>2016-08-07 08:36</td>
-	      	</tr>
+	      	</tr> -->
 	      </tbody>
 	    </table>
     </div>

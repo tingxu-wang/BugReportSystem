@@ -95,7 +95,7 @@
 	<div class="sidebar-toggler hidden-phone"></div>
 </li>
 <li class="start active">
-	<a href="prjDetail.html">
+	<a href="prjdetail.html">
 		<i class="fa fa-sitemap"></i>
 		<span class="title">项目明细</span>
 		<span class="selected"></span>
