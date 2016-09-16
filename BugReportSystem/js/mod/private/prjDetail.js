@@ -20,6 +20,8 @@ define(function (require,exports,module){
 				levelVal=$level.val(),
 				introVal=$intro.val()
 
+			e.preventDefault()
+
 			$submitError.addClass('hidden')
 
 			if(titleVal==='' || levelVal==='' || introVal===''){//校验失败
@@ -54,11 +56,12 @@ define(function (require,exports,module){
 				$('.js-loadingWrap').remove()
 				innerObj.data2=data2
 				$('.js-prjDetailTemplate').html(render(innerObj))	
+
+				eventHandler()//事件注册
 			},'json')
 		},'json')
 	}
 
 	//$('.js-prjDetailTemplate').html(render(obj))
-	tplRender()
-	eventHandler()
+	tplRender()	
 })
