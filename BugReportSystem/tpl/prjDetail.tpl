@@ -166,7 +166,7 @@
 		<span class="text-success js-memberSubmit-success hidden"></span>
 	</div>						
 </div>
-<button class="btn btn-primary js-addUserProject">click</button>
+<button class="btn btn-primary js-addUserProject">提交</button>
 <hr>
 {{ /if }}
 <h4 class="page-title">
