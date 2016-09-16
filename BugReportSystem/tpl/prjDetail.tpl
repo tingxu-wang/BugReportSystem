@@ -191,7 +191,7 @@
 	      	<!-- 成功返回当前用户的项目bug，失败返回0，提出者名称(uname)，解决者名称(sname)，项目id pid,问题介绍intro,等级level,title(bug标题） -->
 	      	{{ each data1 }}
 	      	<tr>
-	      		<td class="js-bugTitle" data-bid="$value.id">{{ $value.title }}</td>
+	      		<td class="js-bugTitle" data-bid="{{ $value.id }}">{{ $value.title }}</td>
 	      		{{ if $value.level==0 }}
 	      		<td>
 	      			<span class="fa fa-star"></span>

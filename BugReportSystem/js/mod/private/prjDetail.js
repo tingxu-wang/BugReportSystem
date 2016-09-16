@@ -102,7 +102,7 @@ define(function (require,exports,module){
 			confirmAlert.showAlert('确定要标记bug '+$bugTitle.text()+'为已解决状态吗？')
 			$('.js-ok-btn').on('click',function(){
 				confirmAlert.fadeout()
-				$.post(ajaxInit.url+'/submitBug',{bid:$bugTitle.data('bid'),remark:''},function(data){
+				$.post(ajaxInit.url+'/submitBug',{bid:$bugTitle.data('bid')},function(data){
 					if(data===1){
 						tplRender()
 					}
