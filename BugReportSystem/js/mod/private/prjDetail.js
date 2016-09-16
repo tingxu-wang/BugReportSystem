@@ -58,6 +58,7 @@ define(function (require,exports,module){
 		},'json')
 	}
 
-	$('.js-prjDetailTemplate').html(render(obj))
-	//tplRender()
+	//$('.js-prjDetailTemplate').html(render(obj))
+	tplRender()
+	eventHandler()
 })
