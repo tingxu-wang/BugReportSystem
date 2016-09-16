@@ -20,10 +20,22 @@ define(function (require,exports,module){
 		triggerSelect($input)
 	})
 
+	$('.js-addPersonInput,.js-selectAll-input').on('click',function(){
+		triggerSelect($(this))
+	})
+
 	$('.js-selectAll-th').on('click',function(){
 		var $this=$(this),
 			$all=$this.parents('table').find('input')
 
 		triggerSelect($all)		
+	})
+
+	$('.js-addUserProject').on('click',function(){
+		var arr=[]
+		$('.js-addPerson input:checked').each(function(index){
+			arr.push($(this).val())
+		})
+		console.log(arr.toString())
 	})
 })	

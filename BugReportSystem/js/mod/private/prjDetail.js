@@ -45,7 +45,7 @@ define(function (require,exports,module){
 			}	
 		})
 
-
+		//人员选择
 		function triggerSelect($selector){
 			if($selector.prop('checked')===false){
 				$selector.prop('checked',true)
@@ -66,6 +66,32 @@ define(function (require,exports,module){
 				$all=$this.parents('table').find('input')
 
 			triggerSelect($all)		
+		})
+
+		$('.js-addPersonInput,.js-selectAll-input').on('click',function(){
+			triggerSelect($(this))
+		})
+
+		$('.js-addUserProject').on('click',function(){
+			var $checkedInput=$('.js-addPerson input:checked')
+
+			$('.js-memberSubmit-error,.js-memberSubmit-success').addClass('hidden')
+			if($checkedInput.length){
+				var arr=[]
+				$checkedInput.each(function(index){
+					arr.push($(this).val())
+				})
+				$.post(ajaxInit.url+'/addUserProject',{pid:$.cookie('detail_pid'),uid:arr.toString()},function(data){
+					if(data===1){
+						$('.js-memberSubmit-success').removeClass('hidden').text('人员绑定成功！')
+					}else{
+						$('.js-memberSubmit-error').removeClass('hidden').text('人员绑定失败，请你稍后刷新重试')
+					}
+				},'json')
+			}else{
+				$('.js-memberSubmit-error').removeClass('hidden').text('请选择人员！')
+			}
+
 		})
 	}
 

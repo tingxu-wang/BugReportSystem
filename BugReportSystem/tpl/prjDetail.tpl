@@ -120,7 +120,7 @@
 	    <table class="table table-striped table-bordered table-hover">
 	      <thead>
 	      	<tr>
-	      		<th class="js-selectAll-th"><input type="checkbox"> 选择</th>
+	      		<th class="js-selectAll-th"><input type="checkbox" class="js-selectAll-input"> 选择</th>
 	        	<th>用户名</th>
 	        	<th>Id</th>
 	        	<th>账号类别</th>
@@ -131,7 +131,7 @@
 	      	{{ each data3 }}
 	      	<!-- [{"id":"8a21a4765731dfc1015731e19fc40000","uid":"8a21a476572e96fb01573100c8250024","sex":"male","name":"tingxu.wang","code":"3","password":"admin"},{"id":"8a21a4765731dfc1015731e208320001","uid":"8a21a476572e96fb01573100c8250024","sex":"male","name":"tester","code":"4","password":"admin"}] -->
 	      	<tr class="js-addPersonRow">
-	      		<td class="js-addPerson"><input type="checkbox" value="{{ $value.id }}"></td>
+	      		<td class="js-addPerson"><input type="checkbox" value="{{ $value.id }}" class="js-addPersonInput"></td>
 	      		<td>{{ $value.name }}</td>
 	      		<td>{{ $value.id }}</td>
 	      		{{ if $value.code==1 }}
@@ -156,6 +156,17 @@
 	    </table>
     </div>
 </div>
+<div class="control-group">
+	<div class="controls left-site">
+		<span class="text-error js-memberSubmit-error hidden"></span>
+	</div>						
+</div>
+<div class="control-group">
+	<div class="controls left-site">
+		<span class="text-success js-memberSubmit-success hidden"></span>
+	</div>						
+</div>
+<button class="btn btn-primary js-addUserProject">click</button>
 <hr>
 {{ /if }}
 <h4 class="page-title">
