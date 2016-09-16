@@ -84,12 +84,12 @@ define(function (require,exports,module){
 				$checkedInput.each(function(index){
 					arr.push($(this).val())
 				})
-				console.log(arr.toString())
+
 				$.post(ajaxInit.url+'/addUserProject',{pid:$.cookie('detail_pid'),uid:arr.toString()},function(data){
-					if(data===1){
-						$('.js-memberSubmit-success').removeClass('hidden').text('人员绑定成功！')
-					}else{
+					if(data===0){
 						$('.js-memberSubmit-error').removeClass('hidden').text('人员绑定失败，请你稍后刷新重试')
+					}else{						
+						$('.js-memberSubmit-success').removeClass('hidden').text('人员绑定成功！')
 					}
 				},'json')
 			}else{
