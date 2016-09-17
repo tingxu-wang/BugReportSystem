@@ -30,6 +30,7 @@
 			<input type="password" class="large m-wrap js-password-confirm" name="confirm">
 		</div>
 	</div>
+	<!-- 
 	<div class="control-group">
 		<label class="control-label left-site">
 			账号id
@@ -38,9 +39,9 @@
 			<div class="form-control-static">
 		      	{{ id  }}
 		    </div>
-			<!-- <input type="text" class="large m-wrap" name="id" disabled="" value="{{ id }}"> -->
 		</div>
 	</div>
+	 -->
 	{{ if code==3 || code==4 }}
 	<div class="control-group">
 		<label class="control-label left-site">

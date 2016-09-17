@@ -3,7 +3,7 @@
 	    <table class="table table-striped table-bordered table-hover">
 	        <thead>
 		      	<tr>
-		        	<th>Id</th>
+		        	<!-- <th>Id</th> -->
 		        	<th>用户名</th>
 		        	<th>账号类别</th>
 		        	<th>性别</th>
@@ -14,7 +14,7 @@
 	        <tbody>
 	        	{{ each data }}
 		      	<tr>
-		      		<td>{{ $value.id }}</td>
+		      		<!-- <td>{{ $value.id }}</td> -->
 		      		<td class="js-user-name">{{ $value.name }}</td>
 
 		      		{{ if $value.code==1 }}

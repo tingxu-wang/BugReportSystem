@@ -4,7 +4,7 @@
 	        <thead>
 		      	<tr>
 		        	<th>用户名</th>
-		        	<th>Id</th>
+		        	<!-- <th>Id</th> -->
 		        	<th>账号类别</th>
 		        	<th>性别</th>
 		        </tr>
@@ -13,7 +13,7 @@
 	        	{{ each data }}
 		      	<tr>
 		      		<td>{{ $value.name }}</td>
-		      		<td>{{ $value.id }}</td>
+		      		<!-- <td>{{ $value.id }}</td> -->
 
 		      		{{ if $value.code==1 }}
 		      		<td>管理员</td>
