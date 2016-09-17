@@ -599,7 +599,7 @@ Horizontal Menu(new in v1.2)
 /***
 	Page sidebar
 	***/
-@media (max-width:979px) {
+@media (max-width:767px) {
 	.page-sidebar .sidebar-toggler {
 		display: none;
 	}
