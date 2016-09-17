@@ -19,7 +19,7 @@
 	      <tbody>
 	      	{{ each data }}
 	      	<tr>
-	      		<td>{{ $value.p_name }}</td>
+	      		<td data-id="{{ $value.id }}">{{ $value.p_name }}</td>
 	      		<!-- <td>{{ $value.id }}</td> -->
 	      		<!-- <td>{{ $value.uid }}</td> -->
 	      		<td>{{ $value.pmname }}</td>
