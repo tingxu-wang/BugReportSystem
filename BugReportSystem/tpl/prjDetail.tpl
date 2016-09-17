@@ -8,11 +8,12 @@
 			项目名称
 		</label>
 		<div class="controls left-site">
-      <div class="form-control-static">
-      	{{ data.p_name }}
-      </div>
-    </div>
+	      <div class="form-control-static">
+	      	{{ data.p_name }}
+	      </div>
+	    </div>
 	</div>
+<!-- 
 	<div class="control-group">
 		<label id="" class="control-label left-site">
 			项目ID
@@ -23,6 +24,7 @@
 	        </div>
 	    </div>
 	</div>
+	 -->
 	<div class="control-group">
 		<label id="" class="control-label left-site">
 			添加时间
