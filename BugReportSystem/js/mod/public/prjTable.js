@@ -8,9 +8,7 @@ define(function (require, epxorts, module){
 
 		$.cookie('detail_pid',pid)//点击的项目id保存到cookie中
 
-		console.log(pid)
-		
-		//window.location.href='prjdetail.html'		
+		window.location.href='prjdetail.html'		
 	})
 /*	$('.js-prj-table tr').on('click',function(){
 		var $this=$(this),
