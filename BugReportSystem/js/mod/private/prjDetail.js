@@ -40,6 +40,7 @@ define(function (require,exports,module){
 				$.post(ajaxInit.url+'/addBug',infoObj,function(data){
 					if(data===1){
 						$('.js-cancel-btn').trigger('click')
+						$('.modal-backdrop').remove()
 						tplRender()
 					}else{
 						$submitError.removeClass('hidden').text('网络出现问题，请您稍后重试！')
