@@ -55,7 +55,7 @@ define(function (require, epxorts, module) {
     });
 
     // 是否展示左侧菜单
-    function init(){
+/*    function init(){
        if($(window).width()<980){
          $('body').removeClass("page-sidebar-closed");
              $('.main-content').css('margin-left',0);
@@ -69,6 +69,35 @@ define(function (require, epxorts, module) {
         if(h<winH){
             $('.main-content').css('min-height',winH)
         } 
+    }*/
+    function init(hidden){
+       if($(window).width()<768){
+         $('body').removeClass("page-sidebar-closed");
+             $('.main-content').css('margin-left',0);
+
+             if($('.page-sidebar').data('hidden')!=1){
+                  $('.page-sidebar').removeClass('in');
+             }
+
+             // safari下面拖动页面触发resize事件
+             if(hidden){
+                $('.page-sidebar').data('hidden','1');
+             }
+        }else if($(window).width()>=768 && $(window).width()<979){
+             $('body').removeClass("page-sidebar-closed");
+            $('.sidebar-toggler').trigger('click');
+            $('.main-content').css('margin-left',35);
+        }else{
+            $('body').removeClass("page-sidebar-closed");
+            $('.main-content').css('margin-left',225);
+            $('.page-sidebar').addClass('in');
+        }
+        var h=$('.main-content').height();
+        var winH=$(window).height()-$('#js-cus-navbar').height();
+        if(h<winH){
+            //$('.main-content').height(winH);
+            $('.main-content').css('min-height',winH)
+        }
     }
     init();
 })
