@@ -311,7 +311,7 @@
 	      			<span class="fa fa-star-"></span>
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
-	      		{{ else if $value.level==5 }}
+	      		{{ else if $value.level==4 }}
 	      		<td>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
