@@ -195,7 +195,7 @@
 	      	<tr class="js-bugDetail">
 	      		<td class="js-bugTitle" data-bid="{{ $value.id }}">{{ $value.bugtitle }}</td>
 	      		{{ if $value.level==0 }}
-	      		<td data-level="$value.level">
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-o"></span>
 	      			<span class="fa fa-star-o"></span>
@@ -203,7 +203,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==1 }}
-	      		<td data-level="$value.level">
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-o"></span>
@@ -211,7 +211,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==2 }}
-	      		<td data-level="$value.level">
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -219,7 +219,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==3 }}
-	      		<td data-level="$value.level">
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-"></span>
@@ -227,7 +227,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==4 }}
-	      		<td data-level="$value.level">
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -282,7 +282,7 @@
 	      	<tr class="js-bugDetail">
 	      		<td>{{ $value.bugtitle }}</td>
 	      		{{ if $value.level==0 }}
-	      		<td>
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-o"></span>
 	      			<span class="fa fa-star-o"></span>
@@ -290,7 +290,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==1 }}
-	      		<td>
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-o"></span>
@@ -298,7 +298,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==2 }}
-	      		<td>
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -306,7 +306,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==3 }}
-	      		<td>
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -314,7 +314,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==4 }}
-	      		<td>
+	      		<td data-level="{{ $value.level }}">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
