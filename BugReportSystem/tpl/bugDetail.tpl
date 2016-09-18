@@ -71,6 +71,16 @@
 				        </div>
 				    </div>
 				</div>
+				<div class="control-group">
+					<label class="control-label left-site">
+						提出时间
+					</label>
+					<div class="controls left-site">
+				        <div class="form-control-static">
+				      	    {{ puttime }}
+				        </div>
+				    </div>
+				</div>
 				{{ if sname!='' }}
 				<div class="control-group">
 					<label class="control-label left-site">
