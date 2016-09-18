@@ -192,10 +192,10 @@
 	      <tbody>
 	      	<!-- 成功返回当前用户的项目bug，失败返回0，提出者名称(uname)，解决者名称(sname)，项目id pid,问题介绍intro,等级level,title(bug标题） -->
 	      	{{ each data1 }}
-	      	<tr>
+	      	<tr class="js-bugDetail">
 	      		<td class="js-bugTitle" data-bid="{{ $value.id }}">{{ $value.bugtitle }}</td>
 	      		{{ if $value.level==0 }}
-	      		<td>
+	      		<td data-level="$value.level">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-o"></span>
 	      			<span class="fa fa-star-o"></span>
@@ -203,7 +203,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==1 }}
-	      		<td>
+	      		<td data-level="$value.level">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-o"></span>
@@ -211,7 +211,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==2 }}
-	      		<td>
+	      		<td data-level="$value.level">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -219,7 +219,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==3 }}
-	      		<td>
+	      		<td data-level="$value.level">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-"></span>
@@ -227,7 +227,7 @@
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==4 }}
-	      		<td>
+	      		<td data-level="$value.level">
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
@@ -237,7 +237,7 @@
 	      		{{ /if }}
 	      		<td>{{ $value.puttime }}</td>
 	      		<td>{{ $value.uname }}</td>
-	      		<td class="table_intro">{{ $value.intro }}</td>
+	      		<td class="table_intro js-table_intro">{{ $value.intro }}</td>
 	      		{{ if code==3 }}
 	      		<td><span class="deleteRow js-submitBug" data-pid="{{ $value.id }}"><span class="fa fa-check text-success"></span> 标记为已解决</span></td>
 	      		{{ /if }}
@@ -279,7 +279,7 @@
 	      </thead>
 	      <tbody>
 	      	{{ each data2 }}
-	      	<tr>
+	      	<tr class="js-bugDetail">
 	      		<td>{{ $value.bugtitle }}</td>
 	      		{{ if $value.level==0 }}
 	      		<td>
@@ -309,8 +309,8 @@
 	      		<td>
 	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star"></span>
-	      			<span class="fa fa-star-"></span>
-	      			<span class="fa fa-star-"></span>
+	      			<span class="fa fa-star"></span>
+	      			<span class="fa fa-star"></span>
 	      			<span class="fa fa-star-o"></span>
 	      		</td>
 	      		{{ else if $value.level==4 }}
@@ -324,9 +324,9 @@
 	      		{{ /if }}
 	      		<td>{{ $value.puttime }}</td>
 	      		<td>{{ $value.uname }}</td>
-	      		<td>{{ $value.sname }}</td>
-	      		<td class="table_intro">{{ $value.intro }}</td>
-	      		<td>{{ $value.solvetime }}</td>
+	      		<td class="js-sname">{{ $value.sname }}</td>
+	      		<td class="table_intro js-table_intro">{{ $value.intro }}</td>
+	      		<td class="js-stime">{{ $value.solvetime }}</td>
 	      	</tr>
 	      	{{ /each }}
 <!-- 	      	<tr>

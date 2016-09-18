@@ -111,6 +111,31 @@ define(function (require,exports,module){
 				},'json')					
 			})
 		})
+
+		//bug详情展示
+		$('.js-bugDetail').on('click',function(){
+			var bugDetailTpl=require('../../../tpl/bugDetail.tpl'),
+				render=template.compile(bugDetailTpl)
+
+			var $rd=$(this).find('td')
+
+			var data={
+				bugTitle:$rd.eq(0).text(),
+				level:$rd.eq(1).data('level'),
+				puttime:$rd.eq(2).text(),
+				uname:$rd.eq(3).text(),
+				intro:$('.js-table_intro').text(),
+				sname:$('.js-sname').text(),
+				stime:$('.js-stime').text()
+			}
+
+			$('body').append(render(data))
+
+			$('body').on('click','.js-bugDetail-submit,.js-confirm-close',function(){
+				$('.js-modal,.js-backdrop').removeClass('in')
+				setTimeout(function (){$('.js-confirm-wrap').remove()},300)		
+			})
+		})
 	}
 
 	function tplRender(){
