@@ -117,16 +117,17 @@ define(function (require,exports,module){
 			var bugDetailTpl=require('../../../tpl/bugDetail.tpl'),
 				render=template.compile(bugDetailTpl)
 
-			var $rd=$(this).find('td')
+			var $this=$(this),
+				$rd=$this.find('td')
 
 			var data={
 				bugTitle:$rd.eq(0).text(),
 				level:$rd.eq(1).data('level'),
 				puttime:$rd.eq(2).text(),
 				uname:$rd.eq(3).text(),
-				intro:$('.js-table_intro').text(),
-				sname:$('.js-sname').text(),
-				stime:$('.js-stime').text()
+				intro:$this.find('.js-table_intro').text(),
+				sname:$this.find('.js-sname').text(),
+				stime:$this.find('.js-stime').text()
 			}
 
 			$('body').append(render(data))
