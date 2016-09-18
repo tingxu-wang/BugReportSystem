@@ -133,7 +133,7 @@ define(function (require,exports,module){
 
 			$('body').on('click','.js-bugDetail-submit,.js-confirm-close',function(){
 				$('.js-modal,.js-backdrop').removeClass('in')
-				setTimeout(function (){$('.js-confirm-wrap').remove()},300)		
+				setTimeout(function (){$('.js-bugDetailWin').remove()},300)		
 			})
 		})
 	}
