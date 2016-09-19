@@ -123,10 +123,10 @@ define(function (require,exports,module){
 			var $td=$(this).parent().find('td')
 
 			var data={
-				bugTitle:$rd.eq(0).text(),
-				level:$rd.eq(1).data('level'),
-				puttime:$rd.eq(2).text(),
-				uname:$rd.eq(3).text(),
+				bugTitle:$td.eq(0).text(),
+				level:$td.eq(1).data('level'),
+				puttime:$td.eq(2).text(),
+				uname:$td.eq(3).text(),
 				intro:$('.js-table_intro',$td).text(),
 				sname:$('.js-sname',$td).text(),
 				stime:$('.js-stime',$td).text()
