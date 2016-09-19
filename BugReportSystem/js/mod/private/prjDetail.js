@@ -127,9 +127,9 @@ define(function (require,exports,module){
 				level:$rd.eq(1).data('level'),
 				puttime:$rd.eq(2).text(),
 				uname:$rd.eq(3).text(),
-				intro:$this.find('.js-table_intro').text(),
-				sname:$this.find('.js-sname').text(),
-				stime:$this.find('.js-stime').text()
+				intro:$('.js-table_intro',$td).text(),
+				sname:$('.js-sname',$td).text(),
+				stime:$('.js-stime',$td).text()
 			}
 
 			$('body').append(render(data))
