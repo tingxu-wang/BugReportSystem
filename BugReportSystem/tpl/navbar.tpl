@@ -2,7 +2,7 @@
 	<div class="navbar-header cus-navbar-header">
       <a class="navbar-brand" href="#">
         <img width="32" alt="Brand" src="../css/img/logo.png">
-        <p class="cus-brand-text">Bug管理后台</p>
+        <p class="cus-brand-text">Enhance</p>
       </a>
     </div>
 	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".nav-collapse" aria-expanded="false">
