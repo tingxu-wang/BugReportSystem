@@ -239,7 +239,7 @@
 	      		<td>{{ $value.uname }}</td>
 	      		<td class="table_intro js-table_intro">{{ $value.intro }}</td>
 	      		{{ if code==3 }}
-	      		<td><span class="deleteRow js-submitBug" data-pid="{{ $value.id }}"><span class="fa fa-check text-success"></span> 标记为已解决</span></td>
+	      		<td class="js-submitBug-td"><span class="deleteRow js-submitBug" data-pid="{{ $value.id }}"><span class="fa fa-check text-success"></span> 标记为已解决</span></td>
 	      		{{ /if }}
 	      	</tr>
 	      	{{ /each }}

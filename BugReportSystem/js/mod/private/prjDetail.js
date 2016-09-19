@@ -113,7 +113,7 @@ define(function (require,exports,module){
 		})
 
 		//bug详情展示
-		$('.js-bugDetail').on('click',function(){
+		$('.js-bugDetail td').not('.js-submitBug-td').on('click',function(){
 			var bugDetailTpl=require('../../../tpl/bugDetail.tpl'),
 				render=template.compile(bugDetailTpl)
 
