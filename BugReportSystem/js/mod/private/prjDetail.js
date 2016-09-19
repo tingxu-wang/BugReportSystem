@@ -120,7 +120,7 @@ define(function (require,exports,module){
 		/*	var $this=$(this),
 				$rd=$this.find('td')*/
 
-			var $rd=$(this).parent().find('td')
+			var $td=$(this).parent().find('td')
 
 			var data={
 				bugTitle:$rd.eq(0).text(),
