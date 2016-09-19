@@ -117,7 +117,10 @@ define(function (require,exports,module){
 			var bugDetailTpl=require('../../../tpl/bugDetail.tpl'),
 				render=template.compile(bugDetailTpl)
 
-			var $rd=$(this).parent()
+		/*	var $this=$(this),
+				$rd=$this.find('td')*/
+
+			var $rd=$(this).parent().find('td')
 
 			var data={
 				bugTitle:$rd.eq(0).text(),
