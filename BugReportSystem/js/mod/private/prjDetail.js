@@ -32,7 +32,7 @@ define(function (require,exports,module){
 			}else{//成功
 				//出入：项目id pid,问题介绍intro,等级level,title(bug标题）
 				var infoObj={
-					pid:$.cookie('detail_pid'),
+					pid:$.cookie('pid'),
 					intro:introVal,
 					level:levelVal,
 					title:titleVal
@@ -45,8 +45,8 @@ define(function (require,exports,module){
 					}else{
 						$submitError.removeClass('hidden').text('网络出现问题，请您稍后重试！')
 					}
-				},'json')			
-			}	
+				},'json')
+			}
 		})
 
 		//人员选择
@@ -69,7 +69,7 @@ define(function (require,exports,module){
 			var $this=$(this),
 				$all=$this.parents('table').find('input')
 
-			triggerSelect($all)		
+			triggerSelect($all)
 		})
 
 		$('.js-addPersonInput,.js-selectAll-input').on('click',function(){
@@ -86,10 +86,10 @@ define(function (require,exports,module){
 					arr.push($(this).val())
 				})
 
-				$.post(ajaxInit.url+'/addUserProject',{pid:$.cookie('detail_pid'),uid:arr.toString()},function(data){
+				$.post(ajaxInit.url+'/addUserProject',{pid:$.cookie('pid'),uid:arr.toString()},function(data){
 					if(data===0){
 						$('.js-memberSubmit-error').removeClass('hidden').text('人员绑定失败，请你稍后刷新重试')
-					}else{						
+					}else{
 						$('.js-memberSubmit-success').removeClass('hidden').text('人员绑定成功！')
 					}
 				},'json')
@@ -108,7 +108,7 @@ define(function (require,exports,module){
 					if(data===1){
 						tplRender()
 					}
-				},'json')					
+				},'json')
 			})
 		})
 
@@ -137,7 +137,7 @@ define(function (require,exports,module){
 
 			$('body').on('click','.js-bugDetail-submit,.js-confirm-close',function(){
 				$('.js-modal,.js-backdrop').removeClass('in')
-				setTimeout(function (){$('.js-bugDetailWin').remove()},300)		
+				setTimeout(function (){$('.js-bugDetailWin').remove()},300)
 			})
 		})
 	}
@@ -152,25 +152,25 @@ define(function (require,exports,module){
 				innerObj.data3=data3
 			},'json')
 		}
-		$.post(ajaxInit.url+'/getProjectInformation',{id:$.cookie('detail_pid')},function(data){//项目信息
+		$.post(ajaxInit.url+'/getProjectInformation',{id:$.cookie('pid')},function(data){//项目信息
 			//[{"id":"8a21a476572e96fb015730db32e3000b","uid":"8a21a476572e96fb015730c2c5490002","p_name":"鎵嬫満QQ","time":"2016-09-16 00:00:00.0","pmname":"鐜嬪涵鏃 ","intro":"Mobile QQ"}]
-			
+
 			innerObj.data=data[0]
-			$.post(ajaxInit.url+'/getBug',{pid:$.cookie('detail_pid'),state:0},function(data1){//未解决
-				//[{"id":"8a21a47657319a5d0157319acddc0000","uid":"8a21a476572e96fb01573100c8250024","level":"2","uname":"pmTest","state":"0","pid":"8a21a47657318e500157318ef2650000","puttime":"2016-09-16 00:00:00.0","intro":"prj1 intro"}]					
+			$.post(ajaxInit.url+'/getBug',{pid:$.cookie('pid'),state:0},function(data1){//未解决
+				//[{"id":"8a21a47657319a5d0157319acddc0000","uid":"8a21a476572e96fb01573100c8250024","level":"2","uname":"pmTest","state":"0","pid":"8a21a47657318e500157318ef2650000","puttime":"2016-09-16 00:00:00.0","intro":"prj1 intro"}]
 				innerObj.data1=data1
-				$.post(ajaxInit.url+'/getBug',{pid:$.cookie('detail_pid'),state:1},function(data2){//已解决
+				$.post(ajaxInit.url+'/getBug',{pid:$.cookie('pid'),state:1},function(data2){//已解决
 					$('.js-loadingWrap').remove()
 					innerObj.data2=data2
-					$('.js-prjDetailTemplate').html(render(innerObj))	
+					$('.js-prjDetailTemplate').html(render(innerObj))
 
 					eventHandler()//事件注册
 				},'json')
-			},'json')			
+			},'json')
 		},'json')
 
 	}
 
 	//$('.js-prjDetailTemplate').html(render(obj))
-	tplRender()	
+	tplRender()
 })
